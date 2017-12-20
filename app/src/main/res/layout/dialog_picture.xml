@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="260dp"
+    android:orientation="vertical"
+    android:id="@+id/rlPrincipal">
+
+    <RelativeLayout
+        android:id="@+id/layoutCamara"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_camera_black" />
+
+        <TextView
+               android:id="@+id/tvCamara"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="20dp"
+               android:layout_toRightOf="@+id/imageView"
+               android:textColor="@android:color/black"
+               android:textStyle="normal"
+               android:text="Camára"
+               android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrisBackground"
+        android:layout_below="@+id/layoutCamara"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutGaleria"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:layout_below="@+id/separador">
+        <ImageView
+            android:id="@+id/imgGaleria"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/ic_gallery_black"/>
+
+        <TextView
+            android:id="@+id/tvGaleria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/imgGaleria"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"
+            android:text="Galeria"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrisBackground"
+        android:layout_below="@+id/layoutGaleria"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutEliminar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:layout_below="@+id/divider">
+        <ImageView
+            android:id="@+id/imgEliminar"
+            android:layout_marginTop="15dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/ic_close_orlando"/>
+
+        <TextView
+            android:id="@+id/tvEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgEliminar"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"
+            android:text="Eliminar foto"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/layoutEliminar"/>
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:text="@string/cancelar"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/divider2"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/RelativeCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circular_white">
+
+     <ImageView
+        android:id="@+id/imgEdit"
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_edit_circle"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"/>
+
+     <ImageView
+         android:id="@+id/imgAuto"
+         android:layout_width="40dp"
+         android:layout_height="30dp"/>
+
+    <TextView
+        android:id="@+id/tvAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGrisInfo"
+        android:text="@string/prueba"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/imgAuto"
+        android:layout_marginLeft="10dp"
+        />
+
+        <ImageView
+            android:id="@+id/imgPlacas"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_plate"
+            android:layout_below="@+id/imgAuto"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+        android:id="@+id/tvPlacas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgAuto"
+        android:textColor="@color/colorGrisInfo"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/prueba"
+        android:layout_toRightOf="@+id/imgAuto"
+            />
+
+        <ImageView
+            android:id="@+id/imgColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_color"
+            android:layout_below="@+id/imgPlacas"
+            android:layout_marginTop="5dp"
+           />
+
+        <ImageView
+            android:id="@+id/imgQuadColor"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/imgPlacas"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imgAuto"/>
+
+        <ImageView
+            android:id="@+id/imgCapacidad"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_asientos2"
+            android:layout_below="@+id/imgColor"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvCapacidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgColor"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/Asientos"
+            android:layout_toRightOf="@+id/imgAuto"/>
+
+    </RelativeLayout>
+</RelativeLayout>

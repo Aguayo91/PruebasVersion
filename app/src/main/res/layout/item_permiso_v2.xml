@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="70dp">
+
+   <LinearLayout
+       android:layout_gravity="center_horizontal"
+       android:gravity="center_horizontal"
+       android:background="#F7F5F1"
+       android:id="@+id/contenedor"
+       android:layout_width="match_parent"
+       android:layout_height="70dp">
+
+
+       <RelativeLayout
+           android:layout_marginLeft="2dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="15dp">
+
+           <ImageView
+               android:orientation="horizontal"
+               android:id="@+id/img_tipo"
+               android:layout_width="15dp"
+               android:layout_height="15dp"
+               android:layout_marginLeft="40dp"
+                />
+
+           <TextView
+               android:id="@+id/tvPeriodoPermiso"
+               android:layout_width="140dp"
+               android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+               android:text="tipo"
+               android:gravity="left"
+               android:textColor="#666666"
+               android:textSize="12dp"
+               android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+           <TextView
+               android:id="@+id/tvAsuntoPermiso"
+               android:layout_width="100dp"
+               android:layout_height="wrap_content"
+               android:text=" Fecha"
+               android:gravity="left"
+               android:textSize="12dp"
+               android:layout_marginRight="25dp"
+               android:layout_alignParentRight="true"
+               android:textColor="#666666"
+               android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+       </RelativeLayout>
+
+
+
+   </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="15dp"
+    android:translationX="15dp">
+
+    <com.sociomas.core.UI.Controls.Layout.ParallaxLayerLayoutProto
+        android:id="@+id/parallax"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:parallaxOffsetBase="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginLeft="-25dp"
+            android:layout_marginRight="-20dp"
+            app:layout_parallaxEnabled="true"
+            android:src="@drawable/arco_amarillo" /-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/fondo_gs_" />
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/foto_avatar_gafete"
+            android:layout_centerHorizontal="true"/>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"/>
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/logo_gs"
+            android:layout_below="@id/imgAvatar"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/placa_gs"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="55dp"
+            app:layout_parallaxEnabled="true"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginLeft="-8dp"
+            android:layout_marginRight="-8dp"
+            android:src="@drawable/rayitas"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="50dp"
+            app:layout_parallaxEnabled="true"/>
+
+        <RelativeLayout
+            android:id="@+id/layoutPleca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_below="@id/logo">
+
+                <TextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guadalupe Liliana"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:shadowColor="@color/negro"/>
+
+                <TextView
+                    android:id="@+id/tvApellidos"
+                    android:layout_below="@id/tvNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gamboa Henández"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/tvCargo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvApellidos"
+                    android:layout_marginTop="10dp"
+                    android:text="Dir. de comunicación organizacional"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCargo"
+                    android:layout_marginTop="10dp"
+                    android:text="600123456"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:shadowDx="-2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:shadowColor="@color/negro"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.sociomas.core.UI.Controls.Layout.ParallaxLayerLayoutProto>
+</LinearLayout>

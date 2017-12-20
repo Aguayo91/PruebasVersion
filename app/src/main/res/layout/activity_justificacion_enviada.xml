@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UI.Activities.JustificarV2.JustificacionEnviada"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:id="@+id/imgManos"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/manos_felicidades"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/tvFelicidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/justificacionEnviada"
+            android:layout_below="@id/imgManos"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/negro" />
+        <TextView
+            android:id="@+id/tvFechaRechazada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tvFelicidades"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="16 de octubre de 2017"
+            android:textSize="15sp"
+            android:textColor="@color/gris_info"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tvSocioRechazado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/tvFechaRechazada"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="Socio: nombre del socio"
+            android:textSize="15sp"
+            android:textColor="@color/gris_info"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvSeEnviara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tvSocioRechazado"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="Se enviará el reporte al área correspondiente"
+            android:textSize="15sp"
+            android:textColor="@color/gris_info"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvHasConfigurado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/tvFelicidades"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="nombre de mi jefe"
+            android:textSize="15sp"
+            android:textColor="@color/negro"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"/>
+
+        <TextView
+            android:id="@+id/tvTuJustificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvHasConfigurado"
+            android:text="@string/tu_justificacion"
+            android:textSize="15sp"
+            android:textColor="@color/negro"/>
+
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvTuJustificacion"
+            android:text="@string/fecha_extendida"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gris_info"/>
+
+        <TextView
+            android:id="@+id/espera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvHasConfigurado"
+            android:layout_marginTop="60dp"
+            android:text="@string/espera_respuesta"
+            android:textStyle="bold"
+            android:textColor="@color/negro"
+            android:textSize="20sp"/>
+        <Button
+            android:id="@+id/boton_continuar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/botonAmarillo"
+            android:layout_below="@+id/espera"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="10dp"
+            android:textAllCaps="true"
+            android:text="@string/ok"/>
+
+    </RelativeLayout>
+</RelativeLayout>

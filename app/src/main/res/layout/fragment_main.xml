@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UI.Activities.Inicio.SliderActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="280dp"
+       android:id="@+id/imgIntro"
+       android:layout_marginTop="30dp"
+       android:src="@drawable/icono_bienvenida_x2"
+       android:layout_centerHorizontal="true"
+       android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/IntroTitle"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:id="@+id/tvTitle"
+        android:layout_below="@+id/imgIntro"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/IntroDescription"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/tvDescription"
+        android:layout_below="@+id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"/>
+
+
+
+    <ImageView
+        android:id="@+id/NextBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="next"
+        android:src="@mipmap/ic_btnright"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="check"
+        android:text="@string/saltar"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/NextBtn" />
+
+</RelativeLayout>

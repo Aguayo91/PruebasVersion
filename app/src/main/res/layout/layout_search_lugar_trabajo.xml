@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#EAEAEA">
+
+
+        <android.support.v4.widget.Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+
+         <android.support.design.widget.AppBarLayout
+             android:id="@+id/appBarLayout"
+             android:layout_width="match_parent"
+             android:layout_height="65dp"
+             android:layout_below="@id/space">
+             <android.support.v7.widget.Toolbar
+                 xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/toolbar"
+                 android:layout_width="match_parent"
+                 android:layout_height="65dp"
+                 app:titleTextColor="@android:color/black"
+                 app:subtitleTextColor="@android:color/black"
+                 android:background="?attr/colorPrimary">
+
+                 <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <ImageView
+                         android:id="@+id/ImgCancel"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_marginTop="10dp"
+                         android:layout_marginRight="30dp"
+                         android:layout_weight="0"
+                         android:src="@drawable/flecha_negra" />
+
+                     <TextView
+                         android:id="@+id/titulo"
+                         android:layout_width="match_parent"
+                         android:layout_toRightOf="@+id/ImgCancel"
+                         android:layout_marginTop="15dp"
+                         android:layout_height="wrap_content"
+                         android:text="@string/selecciona_tus_lugares"
+                         android:textSize="14sp"
+                         android:textStyle="bold"
+                         android:textColor="@android:color/black"/>
+
+
+                 </RelativeLayout>
+
+             </android.support.v7.widget.Toolbar>
+         </android.support.design.widget.AppBarLayout>
+
+
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/recyclerUbicacionesFlip"
+           android:layout_below="@+id/appBarLayout"
+           android:layout_width="match_parent"
+           android:visibility="gone"
+           android:layout_height="100dp"
+           android:layout_marginRight="8dp"
+           android:layout_marginLeft="8dp"
+           android:layout_marginTop="5dp">
+       </android.support.v7.widget.RecyclerView>
+
+
+        <EditText
+            android:id="@+id/txtDestino"
+            android:layout_below="@+id/recyclerUbicacionesFlip"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            style="@style/searchEditText"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerUbicaciones"
+            android:visibility="visible"
+            android:layout_below="@+id/txtDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="false"
+            android:layout_marginRight="8dp"
+            android:layout_above="@+id/btnAgregar"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp" />
+
+    <com.sociomas.core.UI.Controls.Progress.ProgressBubble
+        android:id="@+id/pgBubble"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/listo"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            style="@style/botonRedondoAmarillo"/>
+
+
+</RelativeLayout>

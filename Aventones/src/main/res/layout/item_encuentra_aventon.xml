@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_aventones"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackgroundItems"
+    tools:context=".UI.Adapters.AventonDisponible">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackgroundItems">
+
+            <RelativeLayout
+                android:id="@+id/rlHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivMap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_auto_socio"
+                    tools:context="com.gruposalinas.elektra.sociomas.Activ3ities.Zonas_Ubicaciones.MapaZonaActivity" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/ivMap"
+                    android:layout_marginTop="-40dp"
+                    android:src="@drawable/ic_avatar_fondo" />
+
+                <TextView
+                    android:id="@+id/tvNameCompleto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivMap"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@+id/llPreferencias"
+                    android:layout_toRightOf="@+id/imgAvatar"
+                    android:maxLines="2"
+                    android:text="María Lopez"
+                    android:textColor="@color/negro"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvTelefono"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNameCompleto"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@+id/imgAvatar"
+                    android:layout_toLeftOf="@+id/imgVerRuta"
+                    android:background="@color/amarillo_dialogo"
+                    android:maxLines="2"
+                    android:text="Numero de telefono"
+                    android:gravity="center"
+                    android:textColor="@color/colorGrisInfo"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgVerRuta"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_ver_ruta"
+                    android:layout_above="@+id/llPreferencias"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"/>
+
+                <LinearLayout
+                    android:id="@+id/llPreferencias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/ivMap"
+                    android:orientation="horizontal">
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoFumar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:iconoRef="@drawable/ic_fumar" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoComer"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/imgProhibidoFumar"
+                        app:iconoRef="@drawable/ic_comer" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgNinios"
+                        android:visibility="gone"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/imgProhibidoFumar"
+                        app:iconoRef="@drawable/ic_ninios" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoBultos"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/imgProhibidoComer"
+                        app:iconoRef="@drawable/ic_bultos" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoMascotas"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/imgProhibidoBultos"
+                        app:iconoRef="@drawable/ic_mascotas" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeTime"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/rlHeader">
+
+            <TextView
+                android:id="@+id/tvMinutos"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="25\n Min"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:background="@drawable/badge_circle_red_big"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgObservaciones"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_info"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/RelativeTime"/>
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_above="@+id/llDestino"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@+id/llOrigen"
+                android:layout_below="@+id/rlHeader"
+                android:layout_marginBottom="-10dp"
+                android:layout_marginLeft="1px"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/line_dashed_vertical"
+                android:layerType="software"
+                android:paddingLeft="15dp"></View>
+
+            <LinearLayout
+                android:id="@+id/llOrigen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlHeader"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <ImageView
+                    android:id="@+id/ivOrigen"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_ubicacion" />
+
+
+                    <TextView
+                        android:id="@+id/tvOrigen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Origen"
+                        android:textColor="@color/colorGrisInfo"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHorarioOrigen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="8:00pm"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDestino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llOrigen"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <ImageView
+                    android:id="@+id/ivDestino"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_marker" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvDestino"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorGrisInfo"
+                        android:text="Destino"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHorarioDestino"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="8:00pm"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imgAsientos"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_asientos_transparente"
+                    android:layout_below="@+id/llDestino"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"/>
+
+                    <TextView
+                        android:id="@+id/tvAsientosText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_below="@+id/llDestino"
+                        android:textColor="@color/colorGrisInfo"
+                        android:text="Asientos Disponibles"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tvAsientosDisponibles"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvAsientosDisponibles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="4"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/llDestino"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@+id/imgAsientos"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvDias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tvAsientosText"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/diasDisp"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_below="@+id/llDestino"
+                        android:layout_marginTop="12dp"/>
+
+                    <ImageView
+                        android:id="@+id/imgCoche"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/tvAsientosText"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/ic_coche"/>
+
+                    <TextView
+                        android:id="@+id/tvAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAsientosText"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/imgAsientos"
+                        android:hint="Modelo del auto"/>
+
+                    <TextView
+                        android:id="@+id/tvPlacas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@+id/tvAsientosText"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_alignLeft="@+id/tvAsientosDisponibles"
+                        android:background="@color/gris_navigation"
+                        android:textColor="@color/blanco"
+                        android:gravity="center"
+                        android:text="numero de placas"/>
+
+            <Button
+               android:id="@+id/btnVerAventon"
+               android:layout_width="match_parent"
+               android:layout_height="30dp"
+               style="@style/botonAmarillo"
+               android:text="@string/solicitarAventon"
+               android:layout_below="@+id/tvAuto"
+               android:layout_marginTop="30dp"
+               android:layout_marginBottom="20dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

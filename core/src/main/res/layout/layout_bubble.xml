@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:id="@+id/rlBubble"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/Bubble1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/badge_circle_yellow_medium"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/Bubble2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/badge_circle_yellow_medium"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/Bubble1"/>
+
+    <ImageView
+        android:id="@+id/Bubble3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/badge_circle_yellow_medium"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/Bubble2"/>
+
+    <ImageView
+        android:id="@+id/Bubble4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/badge_circle_yellow_medium"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/Bubble3"/>
+
+    <ImageView
+        android:id="@+id/Bubble5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/badge_circle_yellow_medium"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/Bubble4"/>
+
+</RelativeLayout>

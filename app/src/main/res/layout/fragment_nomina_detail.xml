@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris_claro"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:id="@+id/scrollParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/liberarRecibo"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:id="@+id/llEmpresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvTitleEmpresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Paperless S.A. de C.V."
+                        android:textColor="@color/gris_oscuro"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:transitionName="TransitionNomina1" />
+
+                    <LinearLayout
+                        android:id="@+id/llCompania"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTextoNoCompania"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No. Compañia:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvNoCompania"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Texto Compañia"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRegistroPatronal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:textColor="@color/gris_textos_nomina">
+
+                        <TextView
+                            android:id="@+id/tvTextoRegistroPatronal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Registro patronal:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvRegistroPatronal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Registro patronal"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvDatosEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvEmpresa"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llDatosEmpleado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleEmpleado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Datos del empleado"
+                        android:textColor="@color/gris_textos_nomina"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTextoNombreEmpleado"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Nombre:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvNombreEmpleado"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Nombre Empleado"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gris_claro"></View>
+
+                    <LinearLayout
+                        android:id="@+id/llIMSS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvTextoNoIMSS"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No. IMSS:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvNoIMSS"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Número IMSS"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gris_claro"></View>
+
+                    <LinearLayout
+                        android:id="@+id/llSaldoBase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvTextoSaldoBaseCot"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Sal. Base Cot.:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvSaldoBaseCot"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Salario Base Cotización"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gris_claro"></View>
+
+                    <LinearLayout
+                        android:id="@+id/llCentroCostos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvTextCentroCosto"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Centro de costos:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvCentroCosto"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Número centro costos"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gris_claro"></View>
+
+                    <LinearLayout
+                        android:id="@+id/llTipoDeposito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvTextoDepositoEn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Deposito en:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvDepositoEn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Deposito en "
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gris_claro"></View>
+
+                    <LinearLayout
+                        android:id="@+id/llRFC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvTextoRFC"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="RFC:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvRFC"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="RFC Empleado"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvDetallePago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvDatosEmpleado"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llDetallePago"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleDetallePago"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Detalles del pago"
+                        android:textColor="@color/gris_textos_nomina"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llPeriodo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvTextoPeriodo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Periodo:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvPeriodo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Periodo Pago"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gris_claro"></View>
+
+                    <LinearLayout
+                        android:id="@+id/llDiasTrabajados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvTextoDiasTrabajados"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Días trabajados:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvDiasTrabajados"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="15 dias"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFechaPago"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvTextoFechaPago"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Fecha de pago:"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvFechaPago"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Fecha del Pago"
+                            android:textColor="@color/gris_textos_nomina" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvPercepciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvDetallePago"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llPercepciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitlePercepciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Percepciones"
+                        android:textColor="@color/gris_textos_nomina"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llListaPercepciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvDeducciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvPercepciones"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llDeducciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleDeducciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Deducciones"
+                        android:textColor="@color/gris_textos_nomina"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llListaDeducciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvCredito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvDeducciones"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llCredito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleCredito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Crédito"
+                        android:textColor="@color/gris_textos_nomina"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llListaCredito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvImporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvCredito"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llImporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleImporte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Importe"
+                        android:textColor="@color/gris_textos_nomina"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewMoney
+                        android:id="@+id/tvImporte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        app:amount="0"
+                        app:baseTextColor="@color/gris_textos_nomina"
+                        app:baseTextSize="26sp"
+                        app:decimalDigitsTextSize="20sp"
+                        app:decimalGravity="bottom"
+                        app:decimalMargin="6dp"
+                        app:decimalSeparator="."
+                        app:gravity="centerVertical"
+                        app:includeDecimalSeparator="false"
+                        app:symbol="$"
+                        app:symbolGravity="bottom|start"
+                        app:symbolMargin="5dp"
+                        app:symbolTextSize="26sp"
+                        app:typefaceMoney="bold_type" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvMensajesRecibo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvImporte"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/negro"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/liberarRecibo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_button_oval_yellow"
+        android:minHeight="50dp"
+        android:text="@string/textButtonLiberarRecibo" />
+</RelativeLayout>

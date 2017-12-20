@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8"
+    tools:context=".UI.Activities.Horarios.HorarioPendienteActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:background="@android:color/white"
+        android:layout_below="@id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+    <TextView
+        android:id="@+id/tvDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:paddingStart="5dp"
+        android:textAllCaps="true"
+        android:text="DIA: LUNES"/>
+
+
+    <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.TimeText
+        android:layout_below="@id/tvDia"
+        android:id="@+id/txtHoraEntrada"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hora de entrada"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:drawableEnd="@drawable/ic_hour_gray"/>
+
+    </RelativeLayout>
+
+   <RelativeLayout
+       android:id="@+id/rl2"
+       android:background="@android:color/white"
+       android:layout_width="match_parent"
+       android:layout_below="@id/rl1"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="15dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp">
+
+
+    <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.TimeText
+        android:id="@+id/txtHoraSalida"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hora de Salida"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:drawableEnd="@drawable/ic_hour_gray"/>
+
+   </RelativeLayout>
+
+   <RelativeLayout
+       android:id="@+id/rl3"
+       android:layout_marginTop="15dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/rl2"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:background="@android:color/white">
+
+
+       <CheckBox
+         android:id="@+id/checkedDiaLibre"
+         android:layout_marginTop="15dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="DÍA LIBRE"
+         android:textStyle="bold"
+           android:textSize="16sp"
+           android:layout_marginLeft="10dp"
+         android:layout_marginBottom="10dp"  />
+
+   </RelativeLayout>
+
+   <RelativeLayout
+       android:background="@android:color/white"
+       android:layout_marginTop="15dp"
+       android:layout_marginBottom="20dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/rl3">
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:background="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="GUARDAR"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+   </RelativeLayout>
+</RelativeLayout>

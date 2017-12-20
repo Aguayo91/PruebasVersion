@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+    <RelativeLayout
+        android:id="@+id/relativeUbicacionIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_ubicacion"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/txtAutocomplete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="14sp"
+        android:background="@drawable/cuadro_fondo_gris"
+        android:textColor="@android:color/black"
+        android:paddingLeft="10dp"
+        android:hint="Tu Ubicación"
+        android:layout_toRightOf="@+id/relativeUbicacionIcon"
+        android:layout_toLeftOf="@+id/imgClose"
+        android:dropDownHeight="200dp"/>
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_close"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+       />
+</RelativeLayout>

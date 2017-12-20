@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgSeekBar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_thumb"
+        android:layout_below="@id/txtSelecciona"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/tvSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prueba"
+        android:gravity="center"
+        android:textSize="8dp"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_sheet"
+    android:visibility="visible"
+    android:layout_alignParentBottom="true"
+    android:background="@color/background"
+    android:orientation="vertical" android:layout_width="match_parent"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="230dp"
+    android:layout_height="230dp">
+    <TableLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_marginTop="10dp" android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:onClick="onCamara">
+            <ImageView  android:layout_column="0"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_span="1" android:src="@mipmap/ic_camera"
+                android:layout_height="40dp" android:layout_width="40dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_column="1"
+                android:layout_marginLeft="20dp"
+                android:text="Cámara"></TextView>
+        </TableRow>
+        <TableRow android:layout_marginTop="10dp"
+            android:layout_width="wrap_content" android:layout_height="match_parent" android:onClick="onGaleria" >
+            <ImageView  android:layout_column="0"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_span="1" android:src="@mipmap/ic_gallery"
+                android:layout_height="40dp" android:layout_width="40dp">
+            </ImageView>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_column="1"
+                android:layout_marginLeft="20dp"
+                android:text="Galeria"></TextView>
+        </TableRow>
+        <TableRow android:layout_marginTop="10dp"
+            android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:onClick="onCancel">
+            <ImageView  android:layout_column="0"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_span="1" android:src="@mipmap/ic_cancel"
+                android:layout_height="40dp" android:layout_width="40dp">
+            </ImageView>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_column="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Eliminar"></TextView>
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

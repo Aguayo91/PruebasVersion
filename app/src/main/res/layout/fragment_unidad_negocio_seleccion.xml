@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitleMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/textoUnidadNegocioSeleccion"
+            android:textColor="@color/gris_textos"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etBusqueda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitleMensaje"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="Buscar"
+            style="@style/searchEditText" />
+
+        <GridView
+            android:id="@+id/gridUnidadesNegocio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/etBusqueda"
+            android:layout_marginTop="10dp"
+            android:horizontalSpacing="2dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp"></GridView>
+
+        <ImageView
+            android:id="@+id/ivReload"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/etBusqueda"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@android:drawable/stat_notify_sync"
+            android:tint="@color/negro"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvActualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivReload"
+            android:layout_centerHorizontal="true"
+            android:text="@string/actualizar"
+            android:textColor="@color/gris_textos"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

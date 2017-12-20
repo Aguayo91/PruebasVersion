@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvSubtexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/como_tu_horario"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/blanco"/>
+        <TextView
+            android:id="@+id/tvInicia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tvSubtexto"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:text="@string/inicia_jornada"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/blanco" />
+
+    <ImageView
+        android:id="@+id/imgIniciaBoton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-2dp"
+        android:src="@drawable/ic_entrada"
+        android:layout_below="@+id/tvInicia"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvFinaliza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imgIniciaBoton"
+        android:layout_marginTop="31dp"
+        android:gravity="center_horizontal"
+        android:text="@string/finaliza_jornada"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:textColor="@color/blanco" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_salida"
+        android:layout_below="@+id/tvFinaliza"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

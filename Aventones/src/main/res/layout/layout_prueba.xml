@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imgClock"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_clock"
+        android:layout_below="@+id/etObservaciones"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txtTiempo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etObservaciones"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/imgClock"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        android:text="@string/Tiempo_de_Tolerancia"
+        android:textSize="14sp"/>
+
+    <SeekBar
+        android:id="@+id/SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTiempo"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+</LinearLayout>

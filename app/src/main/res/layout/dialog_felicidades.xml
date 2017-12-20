@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/img_cerrar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_cerrar"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"/>
+
+        <ImageView
+            android:id="@+id/imgManos"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/manos_felicidades"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_cerrar"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvFelicidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/Felicidades"
+            android:layout_below="@id/imgManos"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:textStyle="normal"
+            android:textColor="@color/negro" />
+
+        <TextView
+            android:id="@+id/tvHasConfigurado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/tvFelicidades"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="@string/hasConfigurado"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/boton_continuar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/botonRedondoAmarillo"
+            android:layout_below="@+id/tvHasConfigurado"
+            android:layout_marginTop="80dp"
+            android:textAllCaps="true"
+            android:text="@string/siguiente"/>
+
+</RelativeLayout>

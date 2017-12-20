@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blanco"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlParentNominaReciboItem"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="10dp">
+
+        <eu.davidea.flipview.FlipView
+            android:id="@+id/tvLettersCompany2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:clickable="false"
+            android:clipToPadding="false"
+            android:padding="4dp"
+            app:checked="false"
+            app:enableInitialAnimation="false"
+            app:frontBackground="@drawable/circulo_gris"
+            app:rearBackground="@drawable/circle_checked_item"
+            app:rearImageAnimation="@anim/grow_from_middle_x_y_axis"
+            app:rearLayout="@layout/flipview_rear_custom" />
+
+        <LinearLayout
+            android:id="@+id/llRow1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/tvLettersCompany2"
+            android:gravity="center_vertical"
+            android:minHeight="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvConcepto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Grupo Proasa"
+                android:textColor="@color/gris_textos_nomina"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:transitionName="TransitionNomina1" />
+
+            <TextView
+                android:id="@+id/tvDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:longClickable="false"
+                android:text="Recibo de nómina"
+                android:textColor="@color/gris_textos"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvTextoMonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Importe"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewMoney
+                android:id="@+id/tvMonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:amount="10000"
+                app:baseTextColor="@color/gris_textos_nomina"
+                app:baseTextSize="20sp"
+                app:decimalDigitsTextSize="14sp"
+                app:decimalGravity="top"
+                app:decimalMargin="2dp"
+                app:decimalSeparator="@string/default_decimal_separator"
+                app:gravity="centerVertical"
+                app:includeDecimalSeparator="true"
+                app:symbol="@string/symbolMoney"
+                app:symbolGravity="bottom|start"
+                app:symbolMargin="5dp"
+                app:symbolTextSize="18sp"
+                app:typefaceMoney="bold_type" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

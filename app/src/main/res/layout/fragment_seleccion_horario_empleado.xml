@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris_slide">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgClock"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_clock_v2" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="35dp"
+                android:layout_toRightOf="@+id/imgClock"
+                android:text="@string/Selecciona"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgClock"
+                android:text="@string/los_horarios"
+                android:textColor="@android:color/black"
+                android:textSize="13.5sp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/imgInformation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imgClock"
+                android:src="@drawable/ic_i" />
+
+            <TextView
+                android:id="@+id/tvMiHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvContent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="23dp"
+                android:layout_toRightOf="@+id/imgClock"
+                android:text="@string/horario_variable"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <vn.luongvo.widget.iosswitchview.SwitchView
+                android:id="@+id/switchviewIOS"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvContent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/tvMiHorario"
+                app:checked="false"
+                app:color_off="@color/colorGrisClaro"
+                app:color_on="@color/colorPrimary" />
+
+            <View
+                android:id="@+id/viewDiv"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/switchviewIOS"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorGrisInfo" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewDiv"
+                android:layout_marginTop="2dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlControlHorario1"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/Recycler"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/headerSeleccionDias"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selecciona los días:"
+                        android:textColor="@color/negro" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearSem"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/headerSeleccionDias"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.ControlDiaSem
+                        android:id="@+id/ctrDomingo"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" />
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.ControlDiaSem
+                        android:id="@+id/ctrLunes"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" />
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.ControlDiaSem
+                        android:id="@+id/ctrMartes"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" />
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.ControlDiaSem
+                        android:id="@+id/ctrMiercoles"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" />
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.ControlDiaSem
+                        android:id="@+id/ctrJueves"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" />
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.ControlDiaSem
+                        android:id="@+id/ctrViernes"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" />
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.ControlDiaSem
+                        android:id="@+id/ctrSabado"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/headerSeleccionHorario"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_below="@+id/LinearSem"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selecciona el horario:"
+                        android:textColor="@color/negro" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/headerPickerHorario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:layout_below="@+id/headerSeleccionHorario"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="35dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tvEntrada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toLeftOf="@+id/tvGuion"
+                        android:text="@string/entradaEjemplo"
+                        android:textColor="@color/gris_textos"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvGuion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/guion"
+                        android:textColor="@color/gris_textos"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvSalida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@+id/tvGuion"
+                        android:text="@string/salidaEjemplo"
+                        android:textColor="@color/gris_textos"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/imgClose"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_toRightOf="@+id/tvSalida"
+                        android:src="@drawable/ic_close" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/imgClose"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorGrisInfo" />
+                </RelativeLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandablePickerEntrada"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_below="@+id/headerPickerHorario"
+                    android:layout_marginTop="15dp"
+                    app:ael_orientation="vertical"
+                    app:ael_expanded="false"
+                    android:minHeight="280dp">
+
+                    <RelativeLayout
+                        android:id="@+id/RelativeEntrada"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:text="@string/entrada"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/tvEntradaHoraPicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="30dp"
+                            android:text="@string/horaEntrada"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/expandablePicker2"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_below="@+id/RelativeEntrada"
+                        android:layout_marginTop="5dp"
+                        android:minHeight="180dp"
+                        app:ael_expanded="false"
+                        app:ael_orientation="vertical">
+
+                        <com.sociomas.core.UI.Controls.Dialogs.TimePickerV2
+                            android:id="@+id/timeEntrada"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="145dp"
+                             />
+
+                        <Button
+                            android:id="@+id/btnAnadir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+
+                            android:background="@android:color/transparent"
+                            android:text="@string/anadir"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16dp" />
+
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/RelativeSalida"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:ael_expanded="true"
+                        android:layout_below="@+id/expandablePicker2"
+                        android:background="@drawable/border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:text="@string/salida"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/tvSalidaHoraPicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="30dp"
+                            android:text="@string/horaSalida"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/expandablePicker3"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_below="@+id/RelativeSalida"
+                        android:layout_marginTop="5dp"
+                        android:minHeight="180dp"
+                        app:ael_orientation="vertical">
+
+                        <com.sociomas.core.UI.Controls.Dialogs.TimePickerV2
+                            android:id="@+id/timeSalida"
+                            android:layout_width="wrap_content"
+                            android:layout_height="145dp"
+                            android:layout_marginTop="5dp" />
+
+                        <Button
+                            android:id="@+id/btnAnadir2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="2dp"
+                            android:background="@android:color/transparent"
+                            android:text="@string/anadir"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16dp" />
+
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            </RelativeLayout>
+
+            <com.gruposalinas.elektra.sociomas.UI.Controls.ControlHorarioPicker
+                android:id="@+id/ctrPicker2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlControlHorario1"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ctrPicker2"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnAgregar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/ctrPicker2"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_add"
+                app:backgroundTint="@color/colorPrimary"
+                app:fabSize="mini" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnAgregarGrey"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/ctrPicker2"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_add"
+                android:visibility="gone"
+                app:backgroundTint="@color/colorGrisClaro"
+                app:fabSize="mini" />
+
+            <TextView
+                android:id="@+id/tvAddHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ctrPicker2"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="35dp"
+                android:text="@string/agregarHorario"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnContinuar"
+                style="@style/botonRedondoAmarillo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@+id/tvAddHorario"
+                android:layout_marginTop="30dp"
+                android:text="@string/Next" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

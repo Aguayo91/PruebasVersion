@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/cuadro_border_outline_blanco"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rlCuadro"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@color/transparente_home"
+        android:padding="5dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/ivOpcion"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:tint="@color/blanco"
+                android:alpha="1"
+                android:src="@drawable/ic_aventon_yellow" />
+
+            <com.gruposalinas.elektra.sociomas.UI.Controls.BadgeControl
+                android:id="@+id/imgBadge"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@id/ivOpcion"
+                app:badgeColor="@color/azul_info"
+                app:counter="1"/>
+
+            <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewLatto
+                android:id="@+id/tvOpcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivOpcion"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/blanco" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

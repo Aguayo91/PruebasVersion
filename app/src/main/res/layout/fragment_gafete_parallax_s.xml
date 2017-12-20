@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sociomas.core.UI.Controls.Layout.ParallaxLayerLayout
+        android:id="@+id/parallax"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:parallaxOffsetBase="-10dp"
+        app:parallaxOffsetIncrement="10dp">
+
+        <!--Imagen que va detras de la imagen de perfil-->
+        <ImageView
+            android:id="@+id/logoBgGafete"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            app:layout_parallaxEnabled="true"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="-10dp"
+            android:adjustViewBounds="true"/>
+
+
+        <ImageView
+            android:id="@+id/viewArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/arrow_white_back"
+            app:layout_parallaxEnabled="false"
+            />
+
+        <RelativeLayout
+            android:id="@+id/viewQr"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="-10dp"
+            android:layout_alignParentRight="true"
+            app:layout_parallaxEnabled="false"
+            android:background="@drawable/shape_background_white">
+            <ImageView
+                android:id="@+id/imgQr"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:padding="3dp" />
+
+        </RelativeLayout>
+
+        <!--Pleca de imagenes de negocio -->
+        <RelativeLayout
+            android:id="@+id/layoutPleca"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_below="@+id/imgAvatar"
+            android:layout_marginTop="-30dp"
+            app:parallaxOffsetBase="3dp"
+            app:parallaxOffsetIncrement="3dp">
+            <ImageView
+                android:id="@+id/imgPleca"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:scaleType="centerCrop"/>
+
+
+              <ImageView
+                  android:id="@+id/imgLogoGpo"
+                  android:layout_width="90dp"
+                  android:layout_height="90dp"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="20dp"
+                  android:layout_alignParentLeft="true"
+                  android:scaleType="fitCenter"/>
+
+
+            <ImageView
+                android:id="@+id/imgUnidadNegocio"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitCenter"/>
+
+        </RelativeLayout>
+
+        <!--Imagenes de avatar-->
+        <ImageView
+            android:id="@+id/imgAvatarCircle"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true"
+            app:layout_parallaxEnabled="false"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:padding="3dp"
+            android:layout_marginTop="135dp"
+            android:layout_centerHorizontal="true"
+            app:layout_parallaxEnabled="false"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layoutPlecaMedia"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/layoutPleca">
+            <ImageView
+                android:id="@+id/imgPlecaDatos"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewOswald
+                    android:id="@+id/tvNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textAlignment="center" />
+                <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewOswald
+                    android:id="@+id/tvApellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNombre"
+                    android:textColor="@android:color/black"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textAlignment="center"/>
+
+                <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewOswald
+                    android:id="@+id/tvSocio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvApellidos"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textAlignment="center"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layoutPlecaBaja"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutPlecaMedia">
+            <ImageView
+                android:id="@+id/imgPlecaDatosBaja"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"/>
+            <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewOswald
+                android:id="@+id/tvPuesto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+        </RelativeLayout>
+
+
+
+
+    </com.sociomas.core.UI.Controls.Layout.ParallaxLayerLayout>
+</LinearLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".UI.Activities.Inicio.InicioActivityV2">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_home_gs" />
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@android:color/transparent"
+                app:expandedTitleTextAppearance="@style/TransparentText"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/ivGSLogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_gs_white" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="150dp"
+                        android:layout_below="@+id/ivGSLogo"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_avatar_fondo_v2" />
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/ivGSLogo"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/yellow_circle"/>
+
+
+                    <ImageView
+                        android:id="@+id/fabCamara"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/imgAvatar"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-40dp"
+                        android:src="@drawable/camara_ic_perfil" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:gravity="center_horizontal"
+                        android:onClick="onClick"
+                        android:text="@string/editar_foto"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/blanco"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fabCamara"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:text="Oscar Emilio Pérez Martínez"
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tvNoEmpleado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvName"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:text="10012438"
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:visibility="gone"
+                        app:layout_collapseMode="parallax"
+                        app:layout_scrollFlags="enterAlwaysCollapsed" />
+
+                </android.support.v7.widget.Toolbar>
+
+                <ImageView
+                    android:id="@+id/imageEdit"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_lapiz_edit" />
+
+                <ImageView
+                    android:id="@+id/imgConfiguracion"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_configuracion_white"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/imgNotificacion"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_notification"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvNumeroNotificaciones"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/badge_circle_notification"
+                        android:gravity="center"
+                        android:text="0"
+                        android:visibility="gone"
+                        android:textColor="@color/blanco"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvOpciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/tvVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/azul_version"
+                    android:text="@string/totalsocio"
+                    android:gravity="center"
+                    android:layout_below="@+id/rvOpciones"
+                    android:textColor="@color/blanco"/>
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+   <!--  <com.sociomas.core.UI.Controls.Progress.ProgressBubble
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prBubble" /> -->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+                android:id="@+id/footerNavegacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/navigation_drawer" />
+</android.support.v4.widget.DrawerLayout>

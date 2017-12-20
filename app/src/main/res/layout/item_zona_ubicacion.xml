@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutContent"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:minHeight="60dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageCircleNombre"
+        android:layout_marginLeft="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_toEndOf="@id/imageCircleNombre"
+        android:id="@+id/tvZonaNombre"
+        android:text="TORRE ESMERALDA"
+        android:textAllCaps="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        style="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageFlecha"
+        android:layout_marginTop="15dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/flecha_lista"
+        android:layout_toRightOf="@id/tvZonaNombre"/>
+
+
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tvZonaNombre"
+        android:orientation="vertical"
+        android:fadeScrollbars="true"
+        app:ael_expanded="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:minHeight="250dp"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/progresRecarga"
+                android:visibility="visible"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/colorPrimary" />
+
+
+
+
+            <ScrollView
+                android:id="@+id/scrollViewDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scrollbars="vertical"
+                android:fillViewport="true">
+                <TextView
+                    android:id="@+id/tvZonaDetalle"
+                    android:textAllCaps="true"
+                    android:layout_alignParentTop="true"
+                    android:text="OK \nOK \nOK"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"/>
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btnSolicitar"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/scrollViewDetalle"
+                android:textSize="12sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                style="@style/Base.Widget.AppCompat.Button.Small"
+                android:textAllCaps="true"
+                android:text="@string/eliminar"/>
+
+        </RelativeLayout>
+
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+</RelativeLayout>

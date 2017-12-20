@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/ivGSLogo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="-3dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_gs_white" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/ivGSLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_avatar_fondo_v2" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/ivGSLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/yellow_circle" />
+
+
+        <ImageView
+            android:id="@+id/fabCamara"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/imgAvatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-40dp"
+            android:src="@drawable/camara_ic_perfil" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:text="@string/editar_foto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/blanco"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fabCamara"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="Oscar Emilio Pérez Martínez"
+            android:textAlignment="center"
+            android:textColor="@color/blanco"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvNoEmpleado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="10012438"
+            android:textAlignment="center"
+            android:textColor="@color/blanco"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</LinearLayout>

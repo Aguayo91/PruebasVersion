@@ -1,0 +1,102 @@
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/viewA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:orientation="vertical">
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.gruposalinas.elektra.sociomas.Activities.Zonas_Ubicaciones.MapaZonaActivity" >
+            </fragment>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/viewB"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:orientation="vertical"
+            android:background="@android:color/white"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/layoutBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="100dp"
+        android:background="@android:color/white">
+        <ProgressBar
+            android:visibility="visible"
+            android:id="@+id/progressbar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"/>
+        <RelativeLayout
+            android:id="@+id/layoutContent"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvMinutosKm"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="41 MINIUTOS (16KM)"
+                android:textAllCaps="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tvCalle"
+                android:visibility="visible"
+                android:text="Actualmente es la mejor ruta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp"
+                android:layout_below="@+id/tvMinutosKm"
+                android:layout_alignStart="@+id/tvMinutosKm" />
+
+
+              <Button
+                  android:layout_width="220dp"
+                  android:layout_height="40dp"
+                  android:layout_below="@id/tvCalle"
+                  android:layout_marginRight="20dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginTop="10dp"
+                  android:textSize="12sp"
+                  android:onClick="navegarPublicados"
+                  android:text="Ver aventones publicados"
+                  android:background="@drawable/circle_yellow"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFullScreen"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

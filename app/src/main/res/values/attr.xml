@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Footer">
+        <attr name="showPanico" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ContactoEditText">
+        <attr name="numeroContacto" format="integer"></attr>
+    </declare-styleable>
+    <declare-styleable name="controlDiaSem">
+        <attr name="dia" format="string"/>
+    </declare-styleable>
+</resources>

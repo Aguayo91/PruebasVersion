@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFCD00</color>
+    <color name="colorAmarilloTransparente">#99FFF98C</color>
+    <color name="colorLogoAmarrillo">#FFCE00</color>
+    <color name="colorPrimaryDark">#7A7C7E</color>
+    <color name="colorBackgroundItems">#F7F5F1</color>
+    <color name="colorGrisInfo">#7A7A7A</color>
+    <color name="colorAccent">#7A7C7E</color>
+    <color name="colorAccent2">#99ffffff</color>
+    <color name="colorMapa">#00B3FD</color>
+    <color name="colorGrisClaro">#E5E5E5</color>
+    <color name="colorGreen">#28DD22</color>
+    <color name="negro">#000000</color>
+    <color name="colorPrimaryTransparente">#C8FFCD00</color>
+
+
+    <!--Init Colors CalendarView-->
+
+    <color name="today">#4b82ff</color>
+    <color name="greyed_out">#c7c7c7</color>
+    <color name="summer">#7A7C7E</color>
+    <color name="fall">#7A7C7E</color>
+    <color name="winter">#7A7C7E</color>
+    <color name="spring">#7A7C7E</color>
+    <color name="calendar_day_avento">#80ffce00</color>
+
+    <!--End Colors CalendarView-->
+</resources>

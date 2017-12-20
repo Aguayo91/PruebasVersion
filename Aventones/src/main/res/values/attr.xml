@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditTextBackground">
+        <attr name="icono" format="reference"/>
+        <attr name="hintText" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="CalendarView">
+        <attr name="dateFormat" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProhibitedImage">
+        <attr name="iconoRef" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="itemAventones">
+        <attr name="origen" format="string"/>
+        <attr name="destino" format="string"/>
+        <attr name="empleado" format="string"/>
+        <attr name="numero" format="string"/>
+        <attr name="icon" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="EditTextBackgroundHorario">
+        <attr name="showIcon" format="reference"/>
+        <attr name="showHintText" format="string"/>
+        <attr name="hora" format="string"/>
+        <attr name="tipo" format="string"/>
+        <attr name="onClickHora" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="BubbleView">
+        <attr name="arrowWidth" format="dimension" />
+        <attr name="angle" format="dimension" />
+        <attr name="arrowHeight" format="dimension" />
+        <attr name="arrowPosition" format="dimension" />
+        <attr name="bubbleColor" format="color" />
+        <attr name="arrowCenter" format="boolean" />
+        <attr name="arrowLocation" format="enum">
+            <enum name="left" value="0x00" />
+            <enum name="right" value="0x01" />
+            <enum name="top" value="0x02" />
+            <enum name="bottom" value="0x03" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TextViewMoney">
+        <attr name="format" format="string"/>
+        <attr name="symbol" format="string"/>
+        <attr name="amount" format="string"/>
+        <attr name="symbolMargin" format="dimension"/>
+        <attr name="decimalMargin" format="dimension"/>
+        <attr name="decimalSeparator" format="string"/>
+
+        <attr name="baseTextSize" format="dimension"/>
+        <attr name="symbolTextSize" format="dimension"/>
+        <attr name="decimalDigitsTextSize" format="dimension"/>
+
+        <attr name="symbolGravity">
+            <flag name="start" value="0x01"/>
+            <flag name="end" value="0x02"/>
+            <flag name="top" value="0x04"/>
+            <flag name="bottom" value="0x08"/>
+        </attr>
+
+        <attr name="decimalGravity" format="enum">
+            <enum name="top" value="4"/>
+            <enum name="bottom" value="8"/>
+        </attr>
+
+        <attr name="gravity">
+            <enum name="left" value="0x01"/>
+            <enum name="right" value="0x02"/>
+            <enum name="top" value="0x04"/>
+            <enum name="bottom" value="0x08"/>
+            <enum name="centerVertical" value="0x16"/>
+            <enum name="centerHorizontal" value="0x32"/>
+            <enum name="center" value="0x48"/>
+        </attr>
+
+        <attr name="typeface">
+            <enum name="bold" value="0x01" />
+            <enum name="italic" value="0x02" />
+            <enum name="normal" value="0x04" />
+        </attr>
+
+        <attr name="baseTextColor" format="color"/>
+        <attr name="symbolTextColor" format="color"/>
+        <attr name="decimalTextColor" format="color"/>
+
+        <attr name="includeDecimalSeparator" format="boolean"/>
+        <attr name="decimalUnderline" format="boolean"/>
+        <attr name="fontPath" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="FabSpeedDial">
+        <!-- Menu resource -->
+        <attr name="fab_menu" format="reference"/>
+
+        <!-- Main FAB background color -->
+        <attr name="fab_fabBackgroundColor" format="color"/>
+        <!-- Main FAB drawable -->
+        <attr name="fab_fabDrawable" format="reference"/>
+        <!-- Main FAB drawable tint -->
+        <attr name="fab_fabDrawableTint" format="color"/>
+        <!-- Main FAB ripple color -->
+        <attr name="fab_fabRippleColor" format="color"/>
+
+        <!-- Mini FAB background color -->
+        <attr name="fab_miniFabBackgroundColor" format="color"/>
+        <attr name="fab_miniFabBackgroundColorList" format="reference"/>
+        <!-- Main FAB drawable tint -->
+        <attr name="fab_miniFabDrawableTint" format="color"/>
+        <attr name="fab_miniFabDrawableTintList" format="reference"/>
+        <!-- Mini FAB ripple color -->
+        <attr name="fab_miniFabRippleColor" format="color"/>
+        <attr name="fab_miniFabRippleColorList" format="reference"/>
+
+        <!-- Mini FAB text color -->
+        <attr name="fab_miniFabTextColor" format="color"/>
+        <attr name="fab_miniFabTextColorList" format="reference"/>
+        <!-- Mini FAB text background drawable -->
+        <attr name="fab_miniFabTextBackground" format="reference"/>
+        <attr name="fab_miniFabTextBackgroundList" format="reference"/>
+
+        <!-- Use touch guard -->
+        <attr name="fab_useTouchGuard" format="boolean"/>
+        <!-- Touch guard color -->
+        <attr name="fab_touchGuardColor" format="color"/>
+        <!-- Use touch guard reveal effect -->
+        <attr name="fab_useRevealEffect" format="boolean"/>
+
+        <!-- Use rippe on pre Lollipop -->
+        <attr name="fab_useRippleOnPreLollipop" format="boolean"/>
+
+        <!-- Extra margin between FABs -->
+        <attr name="fab_extraMargin" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="BotonAventones">
+        <attr name="iconos" format="reference"/>
+        <attr name="tipoAventon" format="string"/>
+    </declare-styleable>
+
+</resources>

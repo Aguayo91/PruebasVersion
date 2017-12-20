@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PanoramaImageView">
+        <attr name="piv_enablePanoramaMode" format="boolean" />
+        <attr name="piv_invertScrollDirection" format="boolean" />
+        <attr name="piv_show_scrollbar" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ParallaxLayerLayout">
+        <attr name="parallaxOffsetBase"
+            format="dimension"/>
+        <attr name="parallaxOffsetIncrement"
+            format="dimension"/>
+        <attr name="parallaxScaleHorizontal"
+            format="float"/>
+        <attr name="parallaxScaleVertical"
+            format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="ParallaxLayerLayout_LayoutParams">
+        <attr name="layout_parallaxZIndex"
+            format="integer"/>
+        <attr name="layout_parallaxIncrementMultiplier"
+            format="float"/>
+        <attr name="layout_parallaxEnabled"
+            format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="Botones">
+        <attr name="icono" format="reference"/>
+        <attr name="tipo" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="EditTextViewMax">
+        <attr name="hint" format="string"/>
+        <attr name="max" format="string"/>
+        <attr name="colortext" format="integer"/>
+    </declare-styleable>
+</resources>

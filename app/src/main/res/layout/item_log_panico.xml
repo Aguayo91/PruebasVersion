@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:stretchColumns="*"
+        android:layout_height="55dp">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_column="0"
+                android:textColor="@android:color/black"
+                android:id="@+id/tvFechaEnvio"
+                android:text="OK FECHA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"/>
+
+
+
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/tvEnviado"
+                android:text="NO ENVIADO"
+                android:layout_marginTop="10dp"
+                android:layout_column="1"
+                >
+
+            </TextView>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgReproducir"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/ic_play_arrow"
+                android:layout_column="2"
+                />
+        </TableRow>
+    </TableLayout>
+
+

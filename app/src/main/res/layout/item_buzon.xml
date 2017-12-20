@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/viewLeido"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/amarillo_dialogo"
+        android:visibility="visible"/>
+    <CheckBox
+        android:id="@+id/cbSeleccionar"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="14:00"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/negro"
+            android:gravity="center_vertical|right"
+            android:drawableRight="@drawable/flecha_lista"
+            android:drawablePadding="10dp"/>
+
+        <TextView
+            android:id="@+id/tvMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tuJefeHaRechazado"
+            android:textColor="@color/negro"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvHora"
+            android:paddingLeft="10dp"
+            android:lines="1"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMensaje"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="10dp"
+            android:text="23/10/2017"
+            android:textColor="@color/negro"
+            android:paddingBottom="10dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

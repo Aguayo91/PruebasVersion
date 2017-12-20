@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Activities.Horarios.MisHorariosActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"></include>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutHeader"
+            android:layout_below="@id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include  layout="@layout/item_header_horario"></include>
+        </LinearLayout>
+
+        <ListView
+            android:layout_below="@id/layoutHeader"
+            android:id="@+id/listvieHorarios"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footerNavegacion"/>
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <include layout="@layout/navigation_drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

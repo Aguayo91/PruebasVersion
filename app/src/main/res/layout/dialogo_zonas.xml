@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:minHeight="150dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleZona"
+        android:text="@string/titleZonasUbicacion"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <Button
+        android:id="@+id/btnZona"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/titleZona"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/amarillo_dialogo"
+        android:text="@string/zonapopboton"/>
+    <Button
+        android:id="@+id/btnUbicacion"
+        android:layout_below="@id/titleZona"
+        android:layout_marginTop="15dp"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/btnZona"
+        android:layout_marginLeft="20dp"
+        android:background="@color/amarillo_dialogo"
+        android:layout_height="30dp"
+        android:text="@string/botonpop"/>
+
+</RelativeLayout>

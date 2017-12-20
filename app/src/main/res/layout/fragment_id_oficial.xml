@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"></include>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_id"
+        android:layout_below="@+id/relativeToolbar">
+
+     <TextView
+         android:id="@+id/tvTitle"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Es necesaria para validar tu proceso de credencialización"
+         android:layout_marginLeft="30dp"
+         android:layout_marginRight="30dp"
+         android:layout_marginTop="15dp"
+         android:gravity="center_horizontal"
+         android:textSize="16dp"
+         android:textColor="@android:color/black"/>
+
+
+    <ImageView
+        android:id="@+id/imgCredencial"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvTitle"
+        android:src="@drawable/user_id_icon"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identificaciones oficiales validas:"
+        android:textColor="@color/gris_info"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/imgCredencial"
+        android:layout_centerHorizontal="true"/>
+
+
+        <ImageView
+            android:id="@+id/punto1"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/badge_circle_black"
+            android:layout_below="@+id/tvSubtitle"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credencial para votar."
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/tvSubtitle"
+            android:layout_toRightOf="@+id/punto1"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <ImageView
+            android:id="@+id/punto2"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/badge_circle_black"
+            android:layout_below="@+id/punto1"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pasaporte vigente."
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/punto1"
+            android:layout_toRightOf="@+id/punto2"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <ImageView
+            android:id="@+id/punto3"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/badge_circle_black"
+            android:layout_below="@+id/punto2"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cédula profesional"
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/punto2"
+            android:layout_toRightOf="@+id/punto3"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <ImageView
+            android:id="@+id/punto4"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/badge_circle_black"
+            android:layout_below="@+id/punto3"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cartilla del servicio militar"
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/punto3"
+            android:layout_toRightOf="@+id/punto4"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <Button
+            style="@style/botonNegro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cargar"
+            android:onClick="upload"
+            android:textSize="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:textColor="@color/colorPrimary"/>
+    </RelativeLayout>
+</RelativeLayout>

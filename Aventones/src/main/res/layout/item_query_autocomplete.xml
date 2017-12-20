@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:id="@+id/imageMaker"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_toRightOf="@+id/imageMaker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvQueryTitle"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:text="NETA SYSTEMS"
+            android:textColor="@android:color/black"
+            android:singleLine="false"/>
+        <TextView
+            android:id="@+id/tvQueryDescription"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:text="NETA SYSTEMS"
+            android:textColor="@color/colorGrisInfo" />
+
+        <View
+            android:id="@+id/separador"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

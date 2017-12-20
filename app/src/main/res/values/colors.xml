@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blanco">#ffffff</color>
+    <color name="negro">#000000</color>
+    <color name="colorPrimary">#FFCD00</color>
+    <color name="colorLogoAmarrillo">#FFCE00</color>
+    <color name="colorPrimaryTransparente">#C8FFCD00</color>
+    <color name="colorAmarilloEntrada">#FFD741</color>
+    <color name="colorPrimaryDark">#7A7C7E</color>
+    <color name="colorBackgroundItems">#F7F5F1</color>
+    <color name="colorPrimaryDarker">#cfb002</color>
+    <color name="colorPrimaryAccent">#e9c400</color>
+    <!--color name="colorAccent">#7A7C7E</color-->
+    <color name="colorAccent">#FFBC30</color>
+    <color name="naranja">#FFA500</color>
+    <color name="naranja_dark">#FF873D</color>
+    <color name="amarillo_dialogo">#EFC822</color>
+    <color name="rojo">#FF0202</color>
+    <color name="rojo_horarios">#D44967</color>
+    <color name="colorHeaders">#F7F5F1</color>
+    <color name="colorGrisBackground">#AEAEAE</color>
+    <color name="gris_textos">#666666</color>
+    <color name="gris_slide">#f4f4f4</color>
+    <color name="gris_info">#8c8989</color>
+    <color name="gris_info_transparente">#908c8989</color>
+    <color name="gris_horarios">#d8d8d8</color>
+    <color name="grisTransparente">#908c8989</color>
+    <color name="colorGrisObscuroTrasnparent">#ad000000</color>
+    <color name="gris_navigation">#66696D</color>
+    <color name="trasparente_dos">#000000</color>
+    <color name="azul_claro">#4fbcf7</color>
+    <color name="azul_titulo_promociones">#4db7cc</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="verde">#22b51c</color>
+    <color name="rojo_fuerte">#e8202a</color>
+    <color name="gris_claro">#EEEEEE</color>
+    <color name="gris_justificaciones">#7b7b7b</color>
+    <color name="azul_info">#980EA4E2</color>
+    <color name="azul_dark">#3F51B5</color>
+    <color name="azul_version">#90196074</color>
+    <color name="background">#eeeeee</color>
+    <color name="verde_claro">#06da06</color>
+    <color name="alert_default_text_color">@android:color/black</color>
+    <color name="alert_default_icon_color">@android:color/black</color>
+    <color name="gris_oscuro">#1F1F1F</color>
+    <color name="gris_textos_nomina">#353535</color>
+    <color name="rojo_progress">#FABEAB</color>
+    <color name="verde_progress">#36e097</color>
+    <color name="colorGrisBadge">#BBBABF</color>
+    <color name="blackTransparent">#20000000</color>
+
+
+    <color name="rojo_falta">#D44967</color>
+    <color name="naranja_salida_temprano">#F47C40</color>
+    <color name="naranja_llegada_tarde">#F24314</color>
+    <color name="verde_llegada_temprano">#48D874</color>
+
+
+    <color name="transparente_gafete_preview">#BB000000</color>
+    <color name="colorGrisModificado">#414D56</color>
+</resources>

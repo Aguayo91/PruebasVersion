@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:theme="@style/AppTheme2"
+    android:background="@android:color/black">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aceptas"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/parrafo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="25dp"
+        android:text="@string/parrafo1"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:gravity="fill"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parrafo1"
+        android:layout_marginTop="7dp"
+        android:text="@string/punto"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="7dp" />
+
+
+    <TextView
+        android:id="@+id/parrafo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parrafo1"
+        android:layout_marginTop="20dp"
+        android:text="@string/parrafo2"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:gravity="fill_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parrafo2"
+        android:layout_marginTop="7dp"
+        android:text="@string/punto"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="7dp" />
+
+    <TextView
+        android:id="@+id/parrafo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parrafo2"
+        android:layout_marginTop="20dp"
+        android:text="@string/parrafo3"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:gravity="fill_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parrafo3"
+        android:layout_marginTop="7dp"
+        android:text="@string/punto"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="7dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parrafo3"
+        android:layout_marginTop="20dp"
+        android:text="@string/parrafo4"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:gravity="fill_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/acepto"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:onClick="check"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@android:color/white"
+        android:text="@string/ahora_no"
+        android:textSize="12sp"
+        android:onClick="close"
+        android:layout_marginLeft="10dp"/>
+
+    <CheckBox
+        android:id="@+id/checkNoMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/btnCancelar"
+        android:layout_marginBottom="30dp"
+        android:text="@string/nomostrar"
+        android:textColor="@android:color/white"/>
+</RelativeLayout>

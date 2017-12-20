@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_below="@id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/item_header_permiso"></include>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/layoutDescripcion"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include layout="@layout/descripcion_permiso"/>
+    </LinearLayout>
+
+    <GridView
+        android:layout_below="@+id/header"
+        android:layout_above="@id/layoutDescripcion"
+        android:id="@+id/gridViewPermisos"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

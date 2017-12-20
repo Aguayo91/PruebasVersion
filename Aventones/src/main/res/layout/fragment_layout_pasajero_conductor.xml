@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="@color/colorGrisClaro">
+
+
+
+    <TextView
+        android:id="@+id/tvNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "@string/escanea"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/negro"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/btn_scan"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:onClick="qrScan"
+        android:layout_below="@+id/tvNota"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/btn_scanner" />
+
+    <com.jackandphantom.circularprogressbar.CircleProgressbar
+
+        app:cpb_progress="0"
+        app:cpb_roundedCorner="true"
+        app:cpb_foregroundProgressWidth="15"
+        app:cpb_foregroundProgressColor="@color/colorPrimary"
+        app:cpb_touchEnabled="false"
+        android:id="@+id/circle_loading2"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/tvNota"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/circulo_amarillo" />
+
+    <TextView
+        android:id="@+id/tvNotaQR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "@string/queteescaneen"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/negro"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btn_scan"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imageQr"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:transitionName="@string/qr_transition"
+        android:layout_below="@+id/tvNotaQR"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+       />
+
+
+    <ImageView
+        android:id="@+id/imgMano"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_mano_click"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

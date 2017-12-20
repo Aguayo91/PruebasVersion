@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.Activities.Zonas_Ubicaciones.MapaZonaActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"></include>
+
+        <LinearLayout
+            android:id="@+id/viewA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:orientation="vertical">
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".UI.Activities.Zonas_Ubicaciones.MapaZonaActivity" >
+            </fragment>
+
+            <ImageView
+                android:id="@+id/imagePreviewStreet"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-110dp"
+                android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/viewB"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:background="@android:color/white"/>
+        <LinearLayout
+            android:id="@+id/layoutContent"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvZonaNombre"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Torre Esmeralda"
+                        android:textAllCaps="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/tvCalle"
+                        android:layout_below="@id/tvZonaNombre"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btnAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="ENVIAR "
+                        android:onClick="onClickAction"
+                        style="@style/botonAmarillo"/>
+
+
+                </LinearLayout>
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrisClaro">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/toolbar" />
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:fillViewport="true"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footerNavegacion"
+            android:layout_below="@+id/appBarLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txtSelecciona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorGrisInfo"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/RelativePreferencias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSelecciona"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoFumar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        app:iconoRef="@drawable/ic_fumar" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoComer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        app:iconoRef="@drawable/ic_comer" />
+
+                    <!--<com.sociomas.aventones.UI.Controls.ProhibitedImage-->
+                    <!--android:id="@+id/imgNinios"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:visibility="gone"-->
+                    <!--app:iconoRef="@drawable/ic_ninios" />-->
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoBultos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        app:iconoRef="@drawable/ic_bultos" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoAnimales"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        app:iconoRef="@drawable/ic_mascotas" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtPreferente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/RelativePreferencias"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Titulo compañeros"
+                    android:textColor="@color/colorGrisInfo"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RadioGroup
+                    android:id="@+id/RadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPreferente"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgMen"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="1dp"
+                        android:src="@drawable/hombre_y_mujer"
+                        android:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/rbMen"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:checked="true"
+                        android:text="@string/men"
+                        android:textColor="@color/colorGrisInfo"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbWomen"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/women"
+                        android:textColor="@color/colorGrisInfo"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/rbNoimporta"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="5dp"
+                        android:checked="true"
+                        android:text="@string/indistinto"
+                        android:textColor="@color/colorGrisInfo"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/NecesidadesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/necesidades"
+                    android:textColor="@color/colorGrisInfo"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgSilla"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/NecesidadesTitle"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_silla_ruedas"
+                    android:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/CbSillaRuedas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/NecesidadesTitle"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgEmbarazo"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/Silla"
+                    android:textColor="@color/colorGrisInfo"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgMuletas"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/NecesidadesTitle"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toLeftOf="@+id/CbMuletas"
+                    android:src="@drawable/muletas"
+                    android:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/CbMuletas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/NecesidadesTitle"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:text="@string/muletas"
+                    android:textColor="@color/colorGrisInfo"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgEmbarazo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/imgSilla"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_embarazo"
+                    android:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/CbEmbarazo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/imgSilla"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgEmbarazo"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/Embarazo"
+                    android:textColor="@color/colorGrisInfo"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgTimer"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/RadioGroup"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_cronometro" />
+
+                <TextView
+                    android:id="@+id/tvTitleTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/RadioGroup"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/imgTimer"
+                    android:text="@string/Timetitle"
+                    android:textColor="@color/colorGrisInfo"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                    android:id="@+id/discretSeekbar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleTime"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:thumb="@drawable/seek_bar"
+                    app:dsb_indicatorColor="#000"
+                    app:dsb_max="30"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@color/colorLogoAmarrillo"
+                    app:dsb_rippleColor="@color/colorLogoAmarrillo"
+                    app:dsb_thumbSize="20dp"
+                    app:dsb_trackColor="@color/colorGrisInfo"
+                    app:dsb_trackHeight="5dp"
+                    app:dsb_value="15" />
+
+                <com.sociomas.core.UI.Controls.EditTextTamMax
+                    android:id="@+id/etObservaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/discretSeekbar1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp" />
+
+                <Button
+                    android:id="@+id/btnTerminar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/etObservaciones"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:background="@drawable/circle_yellow"
+                    android:onClick="Next"
+                    android:text="@string/Next"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"></com.sociomas.core.UI.Controls.Notification.FooterNavegacion>
+    </RelativeLayout>
+
+    <include layout="@layout/navigation_drawer" />
+</android.support.v4.widget.DrawerLayout>

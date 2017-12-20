@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descripci_n"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/ic_permisos"
+            style="@style/imageAsistencia" />
+        <TextView
+            android:id="@+id/tvAsistencias"
+            style="@style/tvAsistencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/asistencia_correcta" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/ic_lack"
+            style="@style/imageAsistencia" />
+        <TextView
+            android:id="@+id/tvFaltas"
+            style="@style/tvAsistencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/falta" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/ic_leave"
+            style="@style/imageAsistencia" />
+        <TextView
+
+            android:id="@+id/tvSalidaAntes"
+            style="@style/tvAsistencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/salida_antes_de_horario" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/ic_timelimit"
+            style="@style/imageAsistencia" />
+        <TextView
+            android:id="@+id/tvDespuesHr"
+            style="@style/tvAsistencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/entrada_despu_s_hora_limite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/retardo"
+            style="@style/imageAsistencia" />
+        <TextView
+            android:id="@+id/tvRetardo"
+            style="@style/tvAsistencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retardo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/notermina"
+            style="@style/imageAsistencia" />
+        <TextView
+            android:id="@+id/tvNoTermina"
+            style="@style/tvAsistencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_termina_dia" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"></LinearLayout>
+
+</LinearLayout>

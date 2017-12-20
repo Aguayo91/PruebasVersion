@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:background="@drawable/cuadro_blanco">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+    <ImageView
+        android:id="@+id/imgIcono"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_asistencia_outline"/>
+
+    <TextView
+        android:id="@+id/tvTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imgIcono"
+        android:text="@string/asistencias"
+        android:textColor="@color/blanco"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp" />
+    </RelativeLayout>
+</RelativeLayout>

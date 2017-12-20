@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgCheck"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:src="@drawable/badge_circle_primary"
+        android:layout_below="@id/txtSelecciona"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/tvDia"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/imgNOCheck"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/badge_circle_grey"
+        android:layout_below="@+id/txtSelecciona"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/liberarRecibo"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/rlParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvIngresos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Ingresos"
+                        android:textColor="@color/gris_textos_nomina"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Total Ingresos"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvTotalIngresos"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="$0,000.00"
+                            android:textColor="@color/gris_textos_nomina"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvDescuentos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvIngresos"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Descuentos"
+                        android:textColor="@color/gris_textos_nomina"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Total Descuentos"
+                            android:textColor="@color/gris_textos_nomina" />
+
+                        <TextView
+                            android:id="@+id/tvTotalDescuentos"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="$0,000.00"
+                            android:textColor="@color/rojo_falta"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvImporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvDescuentos"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:minHeight="50dp">
+
+                <LinearLayout
+                    android:id="@+id/llImporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tvTitleImporte"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:text="Importe"
+                        android:textColor="@color/gris_textos_nomina"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewMoney
+                        android:id="@+id/tvImporteTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.4"
+                        android:gravity="right|center_vertical"
+                        app:amount="100000"
+                        app:baseTextColor="@color/gris_textos_nomina"
+                        app:baseTextSize="22sp"
+                        app:decimalDigitsTextSize="16sp"
+                        app:decimalGravity="top"
+                        app:decimalMargin="6dp"
+                        app:decimalSeparator="."
+                        app:gravity="right"
+                        app:includeDecimalSeparator="false"
+                        app:symbol="$"
+                        app:symbolGravity="bottom|start"
+                        app:symbolMargin="5dp"
+                        app:symbolTextSize="20sp"
+                        app:typefaceMoney="bold_type" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/liberarRecibo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_button_oval_yellow"
+        android:minHeight="50dp"
+        android:text="@string/textButtonLiberarRecibo" />
+
+</RelativeLayout>

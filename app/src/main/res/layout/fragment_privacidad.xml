@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvBienvenida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/bienvenido_sociomas"
+        android:textColor="@color/negro"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvComplemento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBienvenida"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/privacidad"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlacepto"
+        android:layout_below="@+id/tvComplemento"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gris_claro"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/webViewPrivacidad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gris_claro"></WebView>
+
+        <!--
+        <TextView
+            android:id="@+id/tvLeyenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>-->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlacepto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSiguiente"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+
+        <CheckBox
+            android:id="@+id/cbxAceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/tvAcuerdo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cbxAceptar"
+            android:text="@string/he_leido_privacidad"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        style="@style/botonAmarillo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/Siguiente"
+        android:textAllCaps="true" />
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="@color/colorGrisClaro">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/Relative2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvCarita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":("
+            android:textSize="130dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tvTitleIntenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No encontramos resultados"
+            android:textSize="25sp"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tvCarita"/>
+
+        <TextView
+            android:id="@+id/tvIntenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="intenta con un rango más amplio"
+            android:textSize="20sp"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tvTitleIntenta"/>
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/botonAmarillo"
+            android:text="Regresar"
+            android:onClick="back"
+            android:layout_above="@+id/footerNavegacion2"
+            android:layout_marginBottom="10dp"/>
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion2"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.sociomas.core.UI.Controls.Notification.FooterNavegacion>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Relative1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_alignParentStart="true">
+
+    <com.sociomas.aventones.UI.Controls.EditTexts.EditTextBackground
+        android:id="@+id/txtInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintText="Origen"
+        android:layout_marginTop="15dp" />
+
+    <com.sociomas.aventones.UI.Controls.EditTexts.EditBackgroundHorario
+        android:id="@+id/txtDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtInicio"
+        app:tipo="Llegada"
+        app:onClickHora="true"
+        app:hora="Llegada 09:00 am"
+        app:showIcon="@drawable/ic_marker" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_semaforo_gris"
+        android:layout_below="@+id/txtDestino"
+        android:layout_toLeftOf="@+id/tvTitleRango"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tvTitleRango"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Selecciona_rango"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtDestino"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/colorGrisInfo"/>
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/dsSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitleRango"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:thumb="@drawable/seek_bar"
+            app:dsb_min="0"
+            app:dsb_max="5"
+            app:dsb_value="0"
+            app:dsb_indicatorFormatter="%d \ Km"
+            app:dsb_allowTrackClickToDrag="false"
+            app:dsb_indicatorColor="@android:color/black"
+            app:dsb_indicatorTextAppearance="@style/CustomFloaterTextAppearance"
+            app:dsb_rippleColor="@color/colorLogoAmarrillo"
+            app:dsb_trackColor="@color/colorGrisInfo"
+            app:dsb_progressColor="@color/colorLogoAmarrillo"
+            app:dsb_trackHeight="5dp"
+            app:dsb_thumbSize="30dp" />
+
+    <Button
+        android:id="@+id/btnFijarTiempo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/circle_yellow"
+        android:text="@string/Encuentra"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:onClick="enviarBack"
+        android:layout_above="@+id/footerNavegacion"/>
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.sociomas.core.UI.Controls.Notification.FooterNavegacion>
+
+      </RelativeLayout>
+     </RelativeLayout>
+
+     <include layout="@layout/navigation_drawer"/>
+    </android.support.v4.widget.DrawerLayout>

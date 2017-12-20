@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/etTexto"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="top"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:layout_below="@+id/tvContador"
+        android:textSize="14sp"
+        android:hint="@string/otrasObservaciones"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"/>
+
+
+    <TextView
+        android:id="@+id/tvContador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    tools:context="com.gruposalinas.elektra.sociomas.UI.Activities.LugaresTrabajo.LugaresActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"/>
+        </android.support.design.widget.AppBarLayout>
+
+
+
+        <EditText
+            android:id="@+id/txtBusqueda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBarLayout"
+            style="@style/searchEditText"/>
+
+
+        <Spinner
+            android:layout_below="@id/txtBusqueda"
+            android:visibility="visible"
+            android:id="@+id/spinnerCatalogoEmpleado"
+            android:layout_width="match_parent"
+            style="@style/spinnerCatalogo"
+            android:paddingLeft="15dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:spinnerMode="dialog"/>
+
+        <View
+            android:layout_below="@+id/spinnerCatalogoEmpleado"
+            android:id="@+id/separador"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerListTrabajo"
+            android:layout_above="@+id/footerNavegacion"
+            android:layout_below="@+id/separador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <include layout="@layout/navigation_drawer"/>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,70 @@
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent">
+    <RelativeLayout
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+            <include layout="@layout/toolbar"/>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_below="@id/appBarLayout"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/viewA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_weight="0.1"
+                android:orientation="vertical">
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".UI.Activities.Zonas_Ubicaciones.MapaZonaActivity">
+                </fragment>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/viewB"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary"/>
+        </LinearLayout>
+      <!--<include layout="@layout/toolbar_transparente"/>-->
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabVerMas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="16dp"
+        app:fabSize="mini"
+        android:visibility="gone"
+        android:src="@mipmap/ic_flecha_mapa_black"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/viewA"
+        android:onClick="onClickVerMas"
+        app:layout_anchorGravity="bottom|right|end"/>
+    <include layout="@layout/bottom_sheet" />
+</android.support.design.widget.CoordinatorLayout>
+
+

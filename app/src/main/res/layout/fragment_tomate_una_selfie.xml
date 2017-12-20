@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tvTomate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tomate_selfie_gaafete"
+            android:textColor="@color/negro"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+        <ImageView
+            android:id="@+id/btnCamara"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tvTomate"
+            android:src="@drawable/btn_camara"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnCamara"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/es_oblicatoria"
+            android:textColor="@color/negro"
+            android:gravity="center"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

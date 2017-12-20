@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_close_black" />
+
+    <ImageView
+        android:id="@+id/imgMarker"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_below="@+id/imgClose"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_marker_green2" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        style="@style/textoSliderNegro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgMarker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/queEsNoTengo" />
+
+    <RelativeLayout
+        android:id="@+id/relativeIos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvQuestion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/tvNoTengoLugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/noTengoLugar"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <vn.luongvo.widget.iosswitchview.SwitchView
+            android:id="@+id/IOS"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tvNoTengoLugar"
+            app:color_off="@android:color/black"
+            app:color_on="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvSiDentro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeIos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="@string/SiDentro"
+        android:textColor="@android:color/black"
+        android:textSize="14dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSiDentro"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tvSiDentro2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MAsde"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvSiDentro2"
+            android:text="@string/seleccionaLA"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvNoTengoLugarFijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/LugarFijo"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvNoTengoLugarFijoContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNoTengoLugarFijo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:text="En esta modalidad, debes de registrar manualmente desde tu app Socio MAS los lugares que estés visitando."
+        android:textColor="@android:color/black"
+        android:textSize="14dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tvOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNoTengoLugarFijoContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="@string/okEntendido"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

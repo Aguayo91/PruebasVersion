@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvSubtexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:text="@string/para_llegar"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/blanco"/>
+    <ImageView
+        android:id="@+id/imgFlecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llFooter"
+        android:src="@drawable/arrow_white"
+        android:layout_below="@+id/tvSubtexto"
+        android:layout_marginLeft="130dp"/>
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="110dp"
+        android:layout_marginBottom="11dp">
+        <ImageView
+            style="@style/ImageFooter"
+            android:src="@drawable/administracion_icon_white" />
+        <TextView
+            style="@style/textFooter"
+            android:text="Administracion" />
+    </LinearLayout>
+
+</RelativeLayout>

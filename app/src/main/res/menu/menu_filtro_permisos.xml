@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Filtrar"
+        android:id="@+id/action_filtro"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_search_flat"/>
+    <item android:id="@+id/action_nuevo_permiso"
+        android:title="@string/agregar"
+        android:icon="@mipmap/ic_add"
+        app:showAsAction="always"></item>
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="#3F3E3E"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/imgPaginaWeb"
+            android:onClick="paginaweb"
+            android:background="@drawable/cuentanos"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/imgPanico"
+            android:layout_width="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:background="@drawable/panico_icono"
+                android:layout_width="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="25dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

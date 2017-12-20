@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorGrisClaro">
+
+    <RelativeLayout
+        android:id="@+id/layoutBusqueda"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/colorGrisClaro">
+
+        <android.support.v4.widget.Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/space"
+            android:src="@drawable/ic_action_back"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="5dp"/>
+
+        <com.sociomas.aventones.UI.Controls.EditTexts.EditTextBackground
+                android:layout_below="@+id/btnBack"
+                android:id="@+id/txtDestino"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintText="Elige una ubicación"
+                app:icono="@drawable/ic_ubicacion"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutElegirUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutBusqueda"
+        android:orientation="horizontal"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/white">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_location_search" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:text="@string/ElegirUbicacion"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerUbicaciones"
+        android:layout_below="@+id/layoutElegirUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="false"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@android:color/white"
+        android:layout_marginBottom="30dp"/>
+
+
+
+</RelativeLayout>

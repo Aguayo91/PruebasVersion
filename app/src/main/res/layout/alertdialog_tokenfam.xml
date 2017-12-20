@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_background_white"
+    android:gravity="center_vertical"
+    android:minHeight="250dp"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/ingresarFAM"
+        android:textAppearance="?android:textAppearance"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tvMensajesRecibo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llControlesToken"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1.2"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/etToken"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:digits="1234567890"
+                android:hint="Token"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:paddingLeft="10dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.8"
+            android:background="@android:color/transparent"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/firma_azteca_dialogo_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!--<Button-->
+        <!--android:id="@+id/btnCancelar"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:background="@drawable/shape_background"-->
+        <!--android:text="@string/cancelar" />-->
+
+        <Button
+            android:id="@+id/btnAceptar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_button_oval_yellow"
+            android:text="@string/aceptar"
+            android:layout_marginBottom="10dp"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

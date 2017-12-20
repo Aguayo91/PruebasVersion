@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <com.github.vipulasri.timelineview.TimelineView
+        android:id="@+id/time_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:markerSize="20dp"
+        app:lineSize="3dp"
+        app:line="@color/colorPrimary"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        app:cardElevation="1dp"
+        app:contentPadding="5dp"
+        android:id="@+id/cardViewTime">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgActividad"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                 />
+
+            <ProgressBar
+                android:id="@+id/progressUbicacion"
+                android:visibility="visible"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyleSmall"/>
+
+            <TextView
+                android:id="@+id/tvDireccion"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                android:layout_toRightOf="@+id/imgActividad"
+                android:text="TORRE ESMERALDA"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDireccion"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/imgActividad"
+                android:text="31/05/2017 a las hahah"
+                android:textColor="@color/gris_info"
+                android:textSize="11sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img_battery"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tvDate"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/rl3"
+                android:src="@drawable/battery_middle" />
+
+            <TextView
+                android:id="@+id/tvBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDate"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/img_battery"
+                android:text="98%"
+                android:textColor="@color/gris_info"
+                android:textSize="11sp" />
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/img_type"
+                android:layout_width="38dp"
+                android:layout_height="27dp"
+                android:layout_below="@+id/tvDate"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgActividad"
+                android:background="@drawable/ic_human"
+                android:src="@mipmap/ic_android" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDate"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/img_type"
+                android:background="@drawable/bco1">
+
+                <ImageView
+                    android:id="@+id/img_actividad2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/ic_human" />
+
+
+                <TextView
+                    android:id="@+id/tv_velocidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/img_actividad2"
+                    android:maxLength="10"
+                    android:text="50km/h"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

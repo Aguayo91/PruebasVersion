@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris_claro"
+    tools:context=".UI.Activities.DesactivarSOS.DesactivarActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/imgPanico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sos_yellow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="15dp"/>
+
+    <ImageView
+        android:id="@+id/imgBanned"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/banned"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:onClick="Desactivar"/>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/layoutEmpleado"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/imgBanned">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresa tu número de empleado para desactivar el botón S.O.S."
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/Relative1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bco1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/title">
+
+            <ImageView
+                android:id="@+id/imgUsuario"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_avatar"
+                android:layout_marginLeft="5dp" />
+
+            <EditText
+                android:id="@+id/txtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgUsuario"
+                android:layout_centerVertical="true"
+                android:inputType="textPassword"
+                android:textColor="@color/gris_info"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:background="@android:color/white"
+                android:layout_marginLeft="5dp"/>
+        </RelativeLayout>
+
+        <Button
+            android:layout_below="@+id/Relative1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/desactivar"
+            android:textSize="17sp"
+            android:background="@drawable/curve_black"
+            android:onClick="Desactivar"
+            android:textColor="@android:color/white"
+            style="@style/botonGris" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="@dimen/tarjeta_cardCornerRadius"
+    card_view:cardElevation="@dimen/tarjeta_cardElevation"
+    card_view:contentPadding="@dimen/card_padding"
+    card_view:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgEmpleado"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/perfil_ekt" />
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/map_warning_icon" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/img_status"
+            android:layout_toRightOf="@+id/imgEmpleado"
+            android:text="Maria de los Remedios Castellano Córdoba"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tvName"
+            android:layout_marginTop="20dp"
+            android:background="@color/gris_info" />
+
+        <TextView
+            android:id="@+id/tvDireccion"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Dirección: Torre Esmeralda"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tvDireccion"
+            android:text="16/05/2017  14:46:24"
+            android:textColor="@color/azul_dark"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLatLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDireccion"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tvStatus"
+            android:text="Lat/Lng:19.296305/-99.18572"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_type"
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:layout_below="@+id/tvLatLong"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/ic_android" />
+
+        <ImageView
+            android:id="@+id/img_signal"
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:layout_below="@+id/tvLatLong"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img_type"
+            android:src="@drawable/ic_tel_movil" />
+
+        <ImageView
+            android:id="@+id/img_actividad"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/tvLatLong"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img_signal"
+            android:src="@drawable/ic_nowalk" />
+
+        <TextView
+            android:id="@+id/tv_velocidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLatLong"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img_actividad"
+            android:maxLength="15"
+            android:text="14.374817 km/h"
+            android:textColor="@android:color/black"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/img_acuracy"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/tvLatLong"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_velocidad"
+            android:src="@drawable/ic_accuracy" />
+
+        <TextView
+            android:id="@+id/tv_accuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLatLong"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img_acuracy"
+            android:maxLength="15"
+            android:text="24.882 mts."
+            android:textColor="@android:color/black"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/img_battery"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tvLatLong"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_accuracy"
+            android:src="@drawable/battery_middle" />
+
+        <TextView
+            android:id="@+id/tvBattery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLatLong"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img_battery"
+            android:text="98%"
+            android:textColor="@android:color/black"
+            android:textSize="10dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:layout_below="@+id/img_type"
+            android:orientation="horizontal" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

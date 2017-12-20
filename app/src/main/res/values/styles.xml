@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SocioMASFullscreen">
+        <item name="android:layout_width">match_parent</item>
+        <!--item name="windowFullscreen">true</item>
+
+        <item name="windowContentOverlay">@null</item-->
+    </style>
+    <!-- Base application theme. -->
+    <style name="materialTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="fab_size">normal</item>
+        <item name="fab_shadowColor">#66000000</item>
+        <item name="fab_colorNormal">@color/colorPrimary</item>
+        <item name="fab_colorPressed">@color/colorPrimaryDark</item>
+        <item name="menu_colorNormal">@color/colorPrimary</item>
+        <item name="menu_colorPressed">@color/colorPrimaryDark</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:textColorSecondary">@android:color/black</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="TransparentText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/holo_red_dark</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:buttonBarButtonStyle">@android:color/white</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:listPreferredItemHeightSmall">50dp</item>
+    </style>
+
+
+    <style name="textoSlider">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+      </style>
+
+    <style name="textoSliderNegro" parent="textoSlider">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="searchEditText">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@android:drawable/editbox_background_normal</item>
+        <item name="android:drawableRight">@drawable/ic_search</item>
+        <item name="android:gravity">center</item>
+        <item name="android:hint">@string/buscar</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="botonBlanco">
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:background">@drawable/shape_button_oval_transparent</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="botonRedondo">
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:background">@drawable/shape_button_oval_transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+    <style name="botonRedondoVerde" parent="botonRedondo">
+        <item name="android:background">@drawable/shape_button_oval_greenligth</item>
+    </style>
+    <style name="botonRedondoAmarillo" parent="botonRedondo">
+        <item name="android:background">@drawable/shape_button_oval_yellow</item>
+        <item name="android:textColor">@color/negro</item>
+    </style>
+    <style name="botonRedondoNegro" parent="botonRedondo">
+        <item name="android:background">@drawable/shape_button_oval_black</item>
+        <item name="android:textColor">@color/amarillo_dialogo</item>
+    </style>
+    <style name="botonRedondoGris" parent="botonRedondo">
+        <item name="android:background">@drawable/shape_botton_oval_gris</item>
+        <item name="android:textColor">@color/blanco</item>
+    </style>
+    <style name="SmsEditText">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:inputType">numberSigned</item>
+        <item name="android:maxLength">4</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/outline</item>
+    </style>
+
+    <!---FOOTER ESTILOS-->
+    <style name="ImageFooter">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="textFooter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="tvAsistencia">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+
+
+    <style name="spinnerCatalogo" parent="@android:style/Widget.Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:spinnerMode">dialog</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:popupBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="imageAsistencia">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="textAlertStyle">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="botonNegro">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:layout_marginRight">60dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/curve_black2</item>
+    </style>
+
+    <style name="botonAmarillo">
+       <!-- <item name="android:background">@drawable/circle_yellow</item>-->
+        <item name="android:background">@drawable/shape_button_oval_yellow</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+    </style>
+
+    <style name="botonGris">
+      <item name="android:textSize">18sp</item>
+      <item name="android:background">@drawable/curve_black</item>
+      <item name="android:textColor">@android:color/white</item>
+      <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme_Dialog_Translucent" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="materialTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
+    </style>
+
+    <style name="materialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+
+</resources>

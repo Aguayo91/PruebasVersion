@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrisClaro">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tvReservados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/appBarLayout"
+        android:text="Mis Aventones Reservados"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/negro"/>
+
+    <TextView
+        android:id="@+id/tvPublica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tvReservados"
+        android:text="@string/AventonesPublicados"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/negro"/>
+    <TextView
+        android:id="@+id/tvEncuentra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/tvPublica"
+        android:text="@string/Encuentra_aventon"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/negro" />
+
+
+</RelativeLayout>

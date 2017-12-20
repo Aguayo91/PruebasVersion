@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/imglogo"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/logo_socio_white"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerInside"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/RelativeEmpleado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imglogo"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/edit_redondo_transparent">
+
+            <ImageView
+                android:id="@+id/imgAvatarWhite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/user_icon_white"/>
+
+            <EditText
+                android:id="@+id/txtNumeroEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:hint="@string/empleado_text"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/imgAvatarWhite"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="25dp"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:nextFocusForward="@+id/txtLlaveMaestra"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeToken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RelativeEmpleado"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_redondo_transparent">
+
+
+            <ImageView
+                android:id="@+id/imgKey"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/llave_icon_white"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/txtLlaveMaestra"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:inputType="textPassword"
+                android:hint="@string/token_llave"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/imgKey"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="25dp"
+                android:imeOptions="actionDone"/>
+
+
+        </RelativeLayout>
+
+
+        <!--Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Sesión"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/curve_black2"
+            android:layout_below="@+id/RelativeToken"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginRight="30dp"/-->
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Sesión"
+            android:textSize="18dp"
+            android:layout_below="@+id/RelativeToken"
+            android:layout_marginTop="30dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            style="@style/botonRedondoNegro"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@id/tvVersion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeCenter"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"/>
+
+</RelativeLayout>
+

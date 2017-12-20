@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_aventones"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/colorBackgroundItems"
+    android:orientation="vertical"
+    tools:context=".UI.Adapters.AventonDisponible">
+
+    <ImageView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relative1"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_auto_socio"
+        tools:context="com.gruposalinas.elektra.sociomas.Activ3ities.Zonas_Ubicaciones.MapaZonaActivity" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="-40dp"
+        android:layout_below="@id/relative1"
+        android:src="@drawable/ic_avatar_fondo" />
+
+
+    <TextView
+        android:id="@+id/tvPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative1"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/imgAvatar"
+        android:text="@string/perfil" />
+
+
+    <RelativeLayout
+        android:id="@+id/botones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvPerfil"
+        android:layout_below="@+id/tvPerfil">
+
+        <com.sociomas.aventones.UI.Controls.ProhibitedImage
+            android:id="@+id/imgProhibidoFumar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            app:iconoRef="@drawable/ic_fumar" />
+
+        <com.sociomas.aventones.UI.Controls.ProhibitedImage
+            android:id="@+id/imgProhibidoComer"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imgProhibidoFumar"
+            app:iconoRef="@drawable/ic_comer" />
+
+        <com.sociomas.aventones.UI.Controls.ProhibitedImage
+            android:id="@+id/imgProhibidoBultos"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imgProhibidoComer"
+            app:iconoRef="@drawable/ic_bultos" />
+
+        <com.sociomas.aventones.UI.Controls.ProhibitedImage
+            android:id="@+id/imgProhibidoMascotas"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imgProhibidoBultos"
+            app:iconoRef="@drawable/ic_mascotas" />
+
+        <ImageView
+            android:id="@+id/origen"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/tvorigen"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/tvorigen"
+            android:src="@drawable/ic_ubicacion" />
+
+        <TextView
+            android:id="@+id/tvorigen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/origen"
+            android:hint="Origen" />
+
+        <ImageView
+            android:id="@+id/imgdestino"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/origen"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/ic_marker" />
+
+        <TextView
+            android:id="@+id/tvdestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/origen"
+            android:hint="Destino" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/tvasientos"
+            android:src="@drawable/ic_asientos_transparente" />
+
+        <TextView
+            android:id="@+id/tvasientos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgProhibidoMascotas"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/origen"
+            android:hint="Asientos disponibles"
+            android:text="" />
+    </RelativeLayout>
+
+
+    <Button
+        style="@style/botonAmarillo"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/relative1"
+        android:layout_below="@+id/botones"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/pide" />
+
+    <RelativeLayout
+        android:id="@+id/relative3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgAvatar">
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

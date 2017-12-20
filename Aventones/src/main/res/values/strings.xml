@@ -1,0 +1,176 @@
+<resources>
+
+    <string name="app_name">Aventones</string>
+    <string name="title_activity_route">Map</string>
+    <string name="left_calendar"><![CDATA[<]]></string>
+    <string name="sugerencias_google">Sugerencias de google</string>
+    <string name="posiciones_validas">Puntos de interés GS</string>
+    <!--Calendar Section Strings-->
+    <string name="calendarTextLunes">LUN</string>
+    <string name="calendarTextDomingo">DOM</string>
+    <string name="calendarTextMartes">MAR</string>
+    <string name="calendarTextMiercoles">MIE</string>
+    <string name="calendarTextJueves">JUE</string>
+    <string name="calendarTextViernes">VIE</string>
+    <string name="calendarTextSabado">SAB</string>
+
+    <!--Fin Calendar Section-->
+    <string name="characteristics">Caracteristicas</string>
+    <string name="que_auto">¿Qué automóvil tienes?</string>
+    <string name="placas">Placas</string>
+    <string name="color">Color</string>
+    <string name="TitleEvitarias">¿Qué evitarías durante el viaje?</string>
+    <string name="otrasObservaciones">Otras observaciones</string>
+    <string name="Tiempo_de_Tolerancia">Tiempo de tolerancia</string>
+    <string name="Preferentemente">Prefiero que mis compañeros de viaje sean:</string>
+    <string name="men">Hombres</string>
+    <string name="women">Mujeres</string>
+    <string name="No_importa">\noimporta</string>
+    <string name="publicarAventon">Publicar Aventón</string>
+    <string name="Automovil">Mis Automóviles</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Agregar_Auto">Agregar otro automóvil</string>
+    <string name="capacidad">Capacidad</string>
+    <string name="Next">Siguiente</string>
+    <string name="Guardar_auto">Guardar automóvil</string>
+    <string name="perfil">Mis preferencias</string>
+    <string name="miperfil">Mi Perfil</string>
+    <string name="Terminar">Terminar</string>
+    <string name="importa">No importa</string>
+    <string name="necesidades">Necesidades especiales</string>
+    <string name="Silla">Silla de Ruedas</string>
+    <string name="muletas">Muletas</string>
+    <string name="Embarazo">Embarazo</string>
+    <string name="Timetitle">Tiempo de tolerancia (min.)</string>
+    <string name="start">Iniciando</string>
+    <string name="stop">Finalizado</string>
+    <string name="prueba">20:00</string>
+    <string name="AventonesPublicados">Aventones publicados</string>
+    <string name="editaaventon">Editar Aventón</string>
+    <string name="Asientos">Asientos disponibles</string>
+    <string name="ok">OK</string>
+    <string name="tvCapacidad">Capacidad total de asientos incluyendo el del conductor</string>
+    <string name="fijarAventon">Publicar aventón</string>
+    <string name="seleccDias">Selecciona los días</string>
+    <string name="ElegirUbicacion">Elegir ubicación en el mapa</string>
+    <string name="FrecuenciaAventon">Frecuencia de aventón</string>
+    <string name="Recurrente">Recurrente</string>
+    <string name="AventonUnico">Único</string>
+    <string name="MinTolerancia"> Minutos de tolerancia (min.)</string>
+    <string name="encuentraAventon">Encuentra</string>
+    <string name="pide">Pide Aventón</string>
+    <string name="AgregarAventon">+ Agregar aventón</string>
+    <string name="semana">Mar,Jue,Sab</string>
+    <string name="salida">Salida</string>
+    <string name="am">8:00 AM</string>
+    <string name="placa_tip_title">Recuerda:</string>
+    <string name="introducePlaca"> Introduce la placa sin guiones.</string>
+    <string name="introduceCapacidad">La capacidad total de asientos incluyendo el conductor.</string>
+    <string name="entendido">Entendido</string>
+    <string name="se_guardo">Automóvil registrado exitosamente.</string>
+    <string name="inputValues">1234567890abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ</string>
+    <string name="tip_description">\n1.- Introduce la placa sin guiones.\n \n2.- La capacidad total de asientos incluyendo el del conductor. \n \n3.- Selecciona un color lo más parecido al de tu automóvil</string>
+    <string name="introduceplacas">Introduce la placa sin guiones.</string>
+    <string name="indistinto">Indistinto</string>
+    <string name="seleccionar">Seleccionar</string>
+    <string name="Encuentra_aventon">Encuentra tu aventón</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="Guardar_cambios">Guardar cambios</string>
+
+    <!--INGRESAR ORIGEN-->
+    <string name="ingresa_origen">Ingresa un origen valido</string>
+    <string name="ingresa_destino">Ingresa un destino</string>
+    <string name="ingresa_un_dia">Ingresa al menos un día</string>
+
+    <string name="publicar_Aventon">Publica tu aventón</string>
+    <string name="Destino">Destino</string>
+    <string name="Selecciona_rango">Selecciona un rango de búsqueda</string>
+
+    <!--Fragments tipo de usuarios-->
+    <string name="QrCode">Codigo QR de conductor</string>
+    <string name="solicitarAventon">Solicitar aventón</string>
+    <string name="ingresa_modelo_auto">Ingresa el modelo del auto</string>
+    <string name="ingresa_placa">Ingresa placa</string>
+    <string name="ingresa_placa_valida">Ingresa una placa válida</string>
+    <string name="ingresa_color">Selecciona el color de tu auto</string>
+
+    <string name="perfil_conductor">Perfil de conductor</string>
+    <string name="perfil_pasajero">Perfil de pasajero</string>
+    <string name="perfil_mixto">Perfil pasajero conductor</string>
+
+
+    <string name="acabasDe">Acabas de solicitar un aventón a</string>
+    <string name="JuanPablo">Juan Pablo Godinez</string>
+    <string name="RecuerdaRespetar">Recuerda ser puntual, respetar</string>
+    <string name="susCondiciones">sus condiciones</string>
+    <string name="okEntendido">OK, entendido</string>
+
+    <string name="fumar">Fumar</string>
+    <string name="Ruta">Ruta</string>
+    <string name="alimentos">Alimentos</string>
+    <string name="equipaje">Equipaje</string>
+    <string name="mascotas">Mascotas</string>
+    <string name="ninios">Niños</string>
+    <string name="diasDisp">Días:</string>
+    <string name="Encuentra">Encuentra</string>
+    <string name="elige_hora_salida">Elige la hora de salida</string>
+    <string name="elige_hore_llegada">Elige la la hora llegada</string>
+    <string name="selecciona_dia">Selecciona al menos un día</string>
+    <string name="selecciona_vehiculo">Selecicona un vehículo</string>
+
+    <!-- Ruta aventones disponibles-->
+    <string name="la_ruta">La ruta</string>
+    <string name="selecciona_un_autom_vil">Selecciona un automóvil</string>
+    <string name="publica_aventon">Publica tu aventón</string>
+    <string name="ingresa_dia_redondo">Ingresa al menos un dia del viaje redondo</string>
+    <string name="SolicitarAventon">Solicitar aventón</string>
+    <string name="SolicitarDialog">¿Estás seguro de solicitar el aventón?</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="aventones_disponibles">Aventones disponibles</string>
+    <string name="godinezName">Juan Peréz Godinez</string>
+    <string name="idGodinez">ID 12345678</string>
+    <string name="acabaDe">Acaba de solicitar un aventón</string>
+    <string name="solicitud_exitosa">Solicitud exitosa</string>
+    <string name="direccionEjemplo">Torre Esmeralda</string>
+    <string name="nobre_del_usuario">Nombre del Usuario</string>
+    <string name="num_tel">55 56 57 58 59</string>
+    <string name="selecciona_color">Selecciona un color</string>
+    <string name="misAventonesReservados">Mis Aventones Reservados</string>
+    <string name="asientosReservados">Asientos Reservados</string>
+    <string name="tipo_trayecto">Tipo de trayecto</string>
+    <string name="ver_mis_pasajeros">Ver mis pasajeros</string>
+    <string name="aventon_redodno">Aventón redondo</string>
+    <string name="Aceptar">Aceptar</string>
+    <string name="mis_pasajeros">Mis pasajeros</string>
+    <string name="sin_pasajeros">Aún no hay solicitudes de pasajeros en este aventón</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="escanea">Escanea el código del conductor al subir y al bajar del automóvil de tu aventón</string>
+    <string name="queteescaneen">Que te escaneen tus pasajeros al subir y al llegar a su destino</string>
+    <string name="selecciona_hora_anterior">La hora de salida no puede ser menor a la hora de llegada</string>
+    <string name="min_diferencia">La hora de salida y llegada deben tener 30 min al menos de diferencia</string>
+    <string name="elige_destino">Elige un destino</string>
+    <string name="elige_origen">Elige un origen</string>
+    <string name="agregarUsuarioPiloto">Agregar usuario piloto</string>
+    <string name="ingresa_no_empleado_piloto">Ingresa el número de empleado.</string>
+    <string name="usuario_piloto">Usuario piloto</string>
+    <string name="ingresa_empleado">Ingresa el número de empleado</string>
+    <string name="qr_pendiente_mensaje">Los datos del QR se enviarán cuando tengas conexión a internet. No es necesario volver a escanear el QR</string>
+    <string name="error_ubicacion">Ocurrió un  error al obtener la ubicación del dispositivo</string>
+    <string name="elige_una_opcion">Elige una opción</string>
+    <string name="decidir_despues">Decidir más tarde</string>
+    <string name="encuentra_aventon">Encuentra tu aventón</string>
+    <string name="toca_codigo">Toca el código QR para ampliarlo y sea escaneado fácilmente.</string>
+    <string name="qr_transition">qrTransition</string>
+    <string name="regresar">Regresar</string>
+    <string name="fab_encuentra">fabEncuentra</string>
+    <string name="fabPublicados">fabPublicados</string>
+    <string name="aventon">Aventón</string>
+    <string name="Agregar_Auto1">Agregar automóvil</string>
+    <string name="ver_mis_autos">ver mis autos</string>
+    <string name="Publica">Pulicar Aventón</string>
+    <string name="armas">armas</string>
+    <string name="minusvalidos">minusvalidos</string>
+    <string name="basura">basura</string>
+
+
+</resources>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris_claro"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshRecibos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/scrollViewParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="Selecciona para liberar nómina:"
+                        android:textColor="@color/gris_textos_nomina" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerRecibos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llHeader"></android.support.v7.widget.RecyclerView>
+
+
+                <LinearLayout
+                    android:id="@+id/llFooterTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/recyclerRecibos"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <eu.davidea.flipview.FlipView
+                        android:id="@+id/fvTotalCheck"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="false"
+                        android:clipToPadding="false"
+                        android:padding="4dp"
+                        app:checked="false"
+                        app:enableInitialAnimation="false"
+                        app:frontBackground="@drawable/circulo_gris"
+                        app:rearBackground="@drawable/circle_checked_item"
+                        app:rearImageAnimation="@anim/grow_from_middle_x_y_axis"
+                        app:rearLayout="@layout/flipview_rear_custom" />
+
+                    <TextView
+                        android:id="@+id/tvFooterTotal1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:gravity="left|center_vertical"
+                        android:minWidth="80dp"
+                        android:paddingLeft="10dp"
+                        android:text="TOTAL"
+                        android:textColor="@color/negro"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFooterTotal2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:clickable="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewMoney
+                        android:id="@+id/tvAmountTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        app:amount="0"
+                        app:baseTextColor="@color/negro"
+                        app:baseTextSize="24sp"
+                        app:decimalDigitsTextSize="16sp"
+                        app:decimalMargin="6dp"
+                        app:gravity="centerVertical"
+                        app:includeDecimalSeparator="false"
+                        app:symbol="$"
+                        app:symbolGravity="start"
+                        app:symbolMargin="6dp"
+                        app:symbolTextSize="20sp"
+                        app:typefaceMoney="bold_type" />
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/llFieldsText"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="60dp"-->
+
+                <!--android:layout_below="@+id/llFooterTotal"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/tilToken"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@+id/llControlesToken"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_weight="1.5"-->
+                <!--android:visibility="visible">-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/etToken"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:digits="1234567890"-->
+                <!--android:hint="Token"-->
+                <!--android:inputType="numberPassword"-->
+                <!--android:maxLength="6"-->
+                <!--android:paddingLeft="10dp"/>-->
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/ivToken"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_weight="0.8"-->
+                <!--android:background="@color/gris_claro"-->
+                <!--android:scaleType="fitCenter"-->
+                <!--android:src="@drawable/logo_firma_azteca" />-->
+                <!--</LinearLayout>-->
+
+
+                <Button
+                    android:id="@+id/btnLiberar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/llFooterTotal"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/curve_black"
+                    android:text="@string/textButtonLiberarNomina"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

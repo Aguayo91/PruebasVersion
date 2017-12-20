@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrisClaro"
+    android:orientation="vertical"
+    tools:context="com.sociomas.aventones.UI.Activities.Publicar.PublicaActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+            <com.sociomas.aventones.UI.Controls.EditTexts.EditTextBackground
+                android:id="@+id/txtInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintText="Origen"
+                android:layout_below="@+id/appBarLayout"/>
+
+            <com.sociomas.aventones.UI.Controls.EditTexts.EditTextBackground
+                android:id="@+id/txtDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:hintText="Destino"
+                app:icono="@drawable/ic_marker"
+                android:layout_below="@+id/txtInicio"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imagenPos"
+                android:src="@drawable/ic_coche"
+                android:background="@color/colorLogoAmarrillo"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/txtDestino"/>
+
+            <Spinner
+                android:id="@+id/auto_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/txtDestino"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#fff"/>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/relative2"
+                android:layout_below="@+id/imagenPos"
+                android:layout_toEndOf="@+id/imagenPos">
+
+                <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                    android:id="@+id/imgProhibidoMascotas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iconoRef="@drawable/ic_mascotas"/>
+                <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                    android:id="@+id/imgProhibidoFumar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iconoRef="@drawable/ic_fumar"
+                    android:layout_toEndOf="@+id/imgProhibidoMascotas" />
+                <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                    android:id="@+id/imgProhibidoComer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iconoRef="@drawable/ic_comer"
+                    android:layout_toEndOf="@+id/imgProhibidoFumar"/>
+                <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                    android:id="@+id/imgProhibidoBultos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iconoRef="@drawable/ic_bultos"
+                    android:layout_toEndOf="@+id/imgProhibidoComer"/>
+
+            </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/imgTimer"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_cronometro"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/relative2"/>
+                <TextView
+                    android:id="@+id/tvTitleTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/Timetitle"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/relative2"
+                    android:textColor="@color/colorGrisInfo"
+                    android:layout_toRightOf="@+id/imgTimer"
+                    android:textAllCaps="false"/>
+
+                <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/discretSeekBar"
+                    android:layout_below="@+id/tvTitleTime"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:thumb="@drawable/seek_bar"
+                    app:dsb_min="0"
+                    app:dsb_max="30"
+                    app:dsb_indicatorColor="#000"
+                    app:dsb_rippleColor="@color/colorLogoAmarrillo"
+                    app:dsb_trackColor="@color/colorGrisInfo"
+                    app:dsb_progressColor="@color/colorLogoAmarrillo"
+                    app:dsb_trackHeight="5dp"
+                    app:dsb_thumbSize="20dp"
+                    app:dsb_value="15"
+                    />
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Guardar"
+                style="@style/botonAmarillo"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:onClick="PublicaActivity"
+                android:layout_centerHorizontal="true" />
+
+
+
+
+
+
+</RelativeLayout>
+

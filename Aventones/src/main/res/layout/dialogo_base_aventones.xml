@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:minHeight="150dp"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvContenido"
+        android:text="¿Deseas enviar esta solicitud?"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tvContenido"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_height="30dp"
+        android:onClick="btnAceptar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_yellow"
+        android:text="@string/aceptar"
+        android:textSize="14dp"/>
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_below="@id/btnConfirmar"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:onClick="btnCancelar"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/curve_black"
+        android:layout_height="30dp"
+        android:text="@string/cancelar"
+        android:textSize="14dp"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>

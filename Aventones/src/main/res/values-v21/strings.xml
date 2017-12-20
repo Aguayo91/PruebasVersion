@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="FrecuenciaAventon">Frecuencia de aventón</string>
+    <string name="Recurrente">Recurrente</string>
+    <string name="AventonUnico">Aventón unico</string>
+    <string name="Selecciona_rango">Selecciona un rango de búsqueda</string>
+</resources>

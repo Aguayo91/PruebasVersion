@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeCalendar"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_below="@+id/tvSelecciona"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="15dp"
+    android:background="@android:color/black">
+
+    <ImageView
+        android:id="@+id/imgCalendar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_calendario_line_white" />
+
+    <TextView
+        android:id="@+id/tvWeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/tvHorario"
+        android:layout_toRightOf="@+id/imgCalendar"
+        android:gravity="center_horizontal"
+        android:text="Lun, Mar, Mie, Jue, Vie"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>
+
+

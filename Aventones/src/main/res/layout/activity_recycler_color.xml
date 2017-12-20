@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.sociomas.aventones.UI.Activities.RecyclerColorActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"></include>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+    <Button
+        android:id="@+id/btAvanzadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Opciones avanzadas"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        style="@style/botonAmarillo"/>
+
+</LinearLayout>

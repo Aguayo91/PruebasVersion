@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/RelativeCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circular_white">
+
+     <Switch
+         android:id="@+id/SwitchAventon"
+         android:visibility="gone"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toLeftOf="@+id/imgEdit"
+         android:layout_marginRight="10dp" />
+
+     <ImageView
+        android:id="@+id/imgEdit"
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_edit_circle"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"/>
+
+     <ImageView
+         android:id="@+id/imgOrigen"
+         android:layout_width="25dp"
+         android:layout_height="25dp"
+         android:layout_marginTop="15dp"
+         android:src="@drawable/ic_ubicacion"
+         android:layout_below="@+id/imgEdit"/>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="80dp"
+            android:layout_above="@+id/imgDestino"
+            android:layout_alignParentLeft="true"
+
+            android:layout_below="@+id/imgOrigen"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginLeft="7dp"
+
+            android:background="@drawable/line_dashed_vertical"
+            android:layerType="software"
+            android:paddingLeft="15dp"></View>
+
+    <TextView
+        android:id="@+id/tvOrigen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGrisInfo"
+        android:layout_below="@+id/imgEdit"
+        android:text="@string/prueba"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/imgOrigen"
+        android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tvHoraOrigen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_below="@+id/imgEdit"
+            android:text="@string/prueba"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/tvOrigen"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:id="@+id/imgDestino"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_marker"
+            android:layout_below="@+id/imgOrigen"
+            android:layout_marginTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/imgRedondo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_redondo"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/imgDestino"/>
+
+        <TextView
+
+            android:id="@+id/tvTipoTrayectoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aventon_redodno"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_below="@+id/imgDestino"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/imgRedondo"/>
+
+        <vn.luongvo.widget.iosswitchview.SwitchView
+            android:id="@+id/switchAndroidD"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/imgDestino"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            app:color_on="@color/colorPrimary"/>
+
+        <TextView
+        android:id="@+id/tvDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgOrigen"
+        android:textColor="@color/colorGrisInfo"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="string/prueba"
+        android:layout_toRightOf="@+id/imgDestino"
+            />
+
+        <TextView
+            android:id="@+id/tvHoraDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgOrigen"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="string/prueba"
+            android:layout_toRightOf="@+id/tvDestino"
+            />
+
+        <ImageView
+            android:id="@+id/imgAsientos"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_asientos2"
+            android:layout_below="@+id/imgRedondo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/tvAsientos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgRedondo"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/Asientos"
+            android:layout_toRightOf="@+id/imgDestino"/>
+
+      <TextView
+          android:id="@+id/tvAsientosDisp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/imgRedondo"
+          android:layout_marginTop="15dp"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="20dp"
+          android:textColor="@color/colorGrisInfo"/>
+
+      <Button
+          android:id="@+id/btnMisPasajeros"
+          android:layout_width="match_parent"
+          android:layout_height="35dp"
+          style="@style/botonAmarillo"
+          android:text="@string/ver_mis_pasajeros"
+          android:textStyle="bold"
+          android:layout_below="@+id/imgAsientos"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_black"
+        android:layout_below="@+id/RelativeCardView"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+    <ImageView
+        android:id="@+id/imgCalendar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_calendar"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvDiaSem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/semana"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvSalida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/salida"
+        android:textColor="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvHsalida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/am"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tvSalida"/>
+
+    </RelativeLayout>
+</RelativeLayout>

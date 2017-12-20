@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".UI.Activities.Promociones.PromocionesActivity">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"/>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layoutImagen"
+            android:layout_below="@id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="next"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_descuento"/>
+
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/footerNavegacion"
+            android:layout_below="@+id/layoutImagen">
+            <GridView
+                android:id="@+id/gridViewCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2"
+                android:verticalSpacing="2dp"
+                android:horizontalSpacing="2dp"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion" android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/navigation_drawer"/>
+
+</android.support.v4.widget.DrawerLayout>
+
+

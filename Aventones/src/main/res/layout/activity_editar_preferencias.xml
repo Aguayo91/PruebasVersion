@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrisClaro"
+    tools:context="com.sociomas.aventones.UI.Activities.EditarPreferencias">
+
+    <include layout="@layout/toolbar"></include>
+
+    <TextView
+        android:id="@+id/tvSelecciona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:text="Titulo ¿Que evitarias?"
+        android:textColor="@color/colorGrisInfo"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/tvSelecciona"
+        android:layout_marginTop="15dp"/>
+
+
+    <TextView
+
+        android:visibility="visible"
+        android:id="@+id/tvCompanierosTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/RecyclerView"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorGrisInfo"
+        android:text="Titulo Mis compañeros de viaje"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/imgCompanieros"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvCompanierosTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/hombre_y_mujer"/>
+
+    <TextView
+        android:id="@+id/tvTitleTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Timetitle"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/imgCompanieros"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorGrisInfo" />
+
+    <ImageView
+        android:id="@+id/imgTimer"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_cronometro"
+        android:layout_below="@+id/tvTitleTime"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/tvTime"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="35 minutos"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/tvTitleTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorGrisInfo" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/botonAmarillo"
+        android:text="Guardar Cambios"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:onClick="Guardar"/>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/rlFilter"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/rlTrue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faltas"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFalse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gris_horarios"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTitleGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faltas"
+            android:textSize="16dp"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/imgIconGrey"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

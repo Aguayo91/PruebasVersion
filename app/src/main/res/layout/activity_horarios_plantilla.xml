@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Activities.Horarios.HorariosPlantillaActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"></include>
+        </android.support.design.widget.AppBarLayout>
+
+
+
+        <com.sociomas.core.UI.Controls.Spinner.SpinnerPlantilla
+            android:id="@+id/spinnerPlantilla"
+            android:layout_below="@id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:visibility="gone"
+            android:id="@+id/spinnerCatalogoEmpleado"
+            android:layout_below="@id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="10dp"
+            style="@style/spinnerCatalogo">
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <View
+            android:visibility="gone"
+            android:layout_below="@+id/spinnerCatalogoEmpleado"
+            android:id="@+id/separador"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/layoutHeader"
+            android:layout_below="@id/spinnerPlantilla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <include  layout="@layout/item_header_horario"></include>
+        </LinearLayout>
+
+
+        <ListView
+            android:layout_below="@+id/layoutHeader"
+            android:layout_above="@+id/footerNavegacion"
+            android:id="@+id/listvieHorarios"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <include layout="@layout/navigation_drawer"/>
+
+
+</android.support.v4.widget.DrawerLayout>
+
+

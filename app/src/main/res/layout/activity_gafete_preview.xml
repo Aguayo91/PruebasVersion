@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gafete"
+    tools:context="com.gruposalinas.elektra.sociomas.UI.Activities.Gafete.GafetePreviewActivity">
+
+    <ScrollView
+        android:id="@+id/Scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgArco"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gafete_arco_header" />
+
+
+            <ImageView
+                android:id="@+id/imgPleca"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/imgArco"
+                android:layout_marginTop="-30dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/gafete_pleca" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgCircle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/imgArco"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-100dp"
+                android:src="@drawable/gafete_marco_circle" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgFoto"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/imgArco"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-100dp"
+                android:src="@drawable/gafete_marco_circle" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@+id/imgPleca"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgLogoGs"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_gs" />
+
+                <ImageView
+                    android:id="@+id/imgGrupo"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_gs" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/imgRlGrey"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="-20dp"
+                android:layout_below="@+id/imgPleca"
+                android:background="#EAEAEAEA">
+
+                <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewOswald
+                    android:id="@+id/tvNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="JUAN PABLO"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewOswald
+                    android:id="@+id/tvApellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNombre"
+                    android:text="PEREZ GODINEZ"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewOswald
+                    android:id="@+id/tvSocio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvApellidos"
+                    android:text="SOCIO 134234"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlBlack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Scroll"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/black">
+
+        <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.TextViewOswald
+            android:id="@+id/tvPuesto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Coordinador administracion \n nuevos negocios "
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

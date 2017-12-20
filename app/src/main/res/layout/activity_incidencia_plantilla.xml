@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.Activities.Justificaciones.IncidenciaPlantillaActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"></include>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <com.gruposalinas.elektra.sociomas.UI.Controls.Navigation.Footer
+        android:id="@+id/layoutFooter"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.gruposalinas.elektra.sociomas.UI.Controls.Navigation.Footer>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_below="@id/appBarLayout"
+        android:layout_above="@id/layoutFooter"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listViewPlantilla"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10.0sp">
+        </ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
+
+    <include layout="@layout/navigation_drawer"/>
+
+
+</android.support.v4.widget.DrawerLayout>

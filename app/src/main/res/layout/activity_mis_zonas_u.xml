@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Activities.Zonas_Ubicaciones.MisZonasUActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <Spinner
+            android:layout_below="@id/appBarLayout"
+            android:visibility="gone"
+            android:id="@+id/spinnerCatalogoEmpleado"
+            android:layout_width="match_parent"
+            style="@style/spinnerCatalogo"
+            android:paddingLeft="15dp"
+            android:layout_height="60dp"
+            android:spinnerMode="dialog"/>
+
+        <View
+            android:layout_below="@+id/spinnerCatalogoEmpleado"
+            android:id="@+id/separador"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separador"
+            android:layout_above="@+id/footerNavegacion"
+            android:orientation="vertical">
+
+            <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+                android:id="@+id/listViewZonas"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"/>
+
+            <com.gruposalinas.elektra.sociomas.UI.Controls.PendientesView
+                android:id="@+id/pendientesView"
+                android:visibility="gone"
+                android:layout_above="@+id/footerNavegacion"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <include layout="@layout/navigation_drawer"/>
+</android.support.v4.widget.DrawerLayout>

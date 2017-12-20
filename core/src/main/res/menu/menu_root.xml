@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/ic_menu_notification"
+        android:title="@string/notificaciones"
+        android:visible="true"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_configuracion_black"
+        android:title="@string/configuraci_n"
+        app:showAsAction="always" />
+</menu>

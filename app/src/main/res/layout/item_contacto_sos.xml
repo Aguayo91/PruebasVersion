@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgUsuario"
+        android:src="@drawable/ic_avatar_grey"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/Div"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tvNombreTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Div"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@+id/imgUsuario"
+        android:layout_marginLeft="1dp"
+        android:text="Nombre del contacto: (55) 2505 1398"/>
+
+
+</RelativeLayout>

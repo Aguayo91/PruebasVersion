@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris_claro">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/appBarLayout"
+        android:id="@+id/layoutHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imgPanico"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sos_yellow"
+            android:layout_marginTop="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:text="@string/sos"
+            android:layout_toRightOf="@+id/imgPanico"/>
+    </RelativeLayout>
+
+
+
+    <com.gruposalinas.elektra.sociomas.UI.Controls.TextViews.BubbleTextView
+        android:id="@+id/bubleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layoutHeader"
+        app:arrowWidth="8dp"
+        app:angle="8dp"
+        app:arrowHeight="13dp"
+        app:arrowPosition="14dp"
+        app:arrowLocation="bottom"
+        app:arrowCenter="true"
+        app:bubbleColor="@android:color/black"
+        android:textSize="16sp"
+        android:text="Presiona 2 segundos para detener la alerta"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"/>
+
+
+
+    <com.gruposalinas.elektra.sociomas.UI.Controls.ImageView.ImageProgressPanico
+        android:id="@+id/imageProgressPanico"
+        android:layout_below="@+id/layoutHeader"
+        android:layout_marginTop="40dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageProgressPanico"
+        android:textColor="@color/rojo"
+        android:text="5"
+        android:layout_marginTop="20dp"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageProgressPanico"
+        android:layout_toLeftOf="@+id/tvCounter"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:text="Tienes"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageProgressPanico"
+        android:layout_toRightOf="@+id/tvCounter"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:text="segundos"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/msjAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tvCounter"
+        android:layout_centerHorizontal="true"
+        android:text="para cancelar la alerta"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"/>
+
+    <RelativeLayout
+        android:id="@+id/Relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bco1"
+        android:layout_below="@+id/msjAlert"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/msjNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@android:color/black"
+            android:text="@string/se_enviar_una_notificaci_n_de_alerta_a_los_siguientes_contactos"
+            android:gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/Div"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/msjNotification"
+            android:background="@android:color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/recyclerContactos"
+               android:layout_width="match_parent"
+               android:layout_below="@+id/Div"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
+

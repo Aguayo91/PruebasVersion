@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+    <ImageView
+        android:id="@+id/imgAdvertencia"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/triangulo_advertencia"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+    <RelativeLayout
+        android:id="@+id/rlTextos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgAdvertencia"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/tvAtencion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/atencion"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/blanco"/>
+        <RelativeLayout
+            android:id="@+id/rlBrakets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bracket_line">
+
+            <TextView
+                android:id="@+id/tvSubtexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="60dp"
+                android:gravity="center_horizontal"
+                android:text="@string/borrara_configuracion"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/blanco"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/estas_de_acuerdo"
+            android:layout_marginTop="-20dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/blanco"
+            android:layout_below="@+id/rlBrakets"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        style="@style/botonRedondoNegro"
+        android:layout_below="@+id/rlTextos"
+        android:text="@string/ok"
+        android:textAllCaps="true" />
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        style="@style/botonRedondoNegro"
+        android:layout_below="@+id/btnAceptar"
+        android:text="@string/cancelar"
+        android:textAllCaps="true" />
+    </RelativeLayout>
+</RelativeLayout>

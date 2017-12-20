@@ -1,0 +1,95 @@
+package com.sociomas.core.MVP.enums;
+
+/**
+ * Created by Giovanni Toledo Toledo mail: giio.toledo@gmail.com on 07/09/17.
+ */
+
+public enum ViewEventType {
+    ERROR_EVENT_TYPE(-10),
+
+    VALIDATION_ERROR_EVENT_TYPE(-20),
+
+    MODEL_UPDATED_EVENT_TYPE(10),
+
+    NAVIGATE_EVENT_TYPE(20),
+
+    NAVIGATE_FRAGMENT_EVENT_TYPE(21),
+
+    NAVIGATE_EVENT_OPENBROWSER(22),
+
+    NAVIGATE_EVENT_CALL(23),
+
+    SHOW_PROGRESS_EVENT_TYPE(30),
+
+    HIDE_PROGRESS_EVENT_TYPE(40),
+
+    DISMISS_EVENT_TYPE(50),
+
+    SUCCESS_EVENT_TYPE(60),
+
+    EMPTYSET_EVENT_TYPE(70),
+
+    NETWORK_ERROR(80),
+
+    SHOW_ERROR_DIALOG_EVENT_TYPE(90),
+
+    CLOSE_ERROR_DIALOG_EVENT_TYPE(100),
+
+    SHOW_LAYOUT_ELEMENT(110),
+
+    HIDE_LAYOUT_ELEMENT(120),
+
+    SHOW_TOAST_MESSAGE(130),
+
+    SHOW_SNAK_BAR_MESSAGE(131),
+
+    SHOW_SUCCESS_MESSAGE(132),
+
+    PRESENT_OBJECT_EVENT_TYPE(140),
+
+    PRESENT_RESULTSET_EVENT_TYPE(141),
+
+    SET_TOOLBAR_EVENT_TYPE(150),
+
+    ENABLE_CONTROL_EVENT_TYPE(160),
+
+    DISABLE_CONTROL_EVENT_TYPE(170),
+
+    UPDATE_CONTROL_EVENT_TYPE(180),
+
+    REFRESH_VIEW(190),
+
+    SHOW_DIALOG_EVENT_TYPE(200),
+
+    HIDE_DIALOG_EVENT_TYPE(210),
+
+    SHOW_CONFIRM_DIALOG_EVENT_TYPE(220),
+
+    HIDE_CONFIRM_DIALOG_EVENT_TYPE(230),
+
+    HIDE_KEYBOARD_EVENT_TYPE(240),
+
+    ERROR_FLOW_EVENT_TYPE(250),
+
+    WARNING_FLOW_EVENT_TYPE(260),
+
+    UPDATE_CONTROL_EVENT_TAB(270),
+
+    UPDATE_APPLICATION(280);
+
+    private final int number;
+
+    ViewEventType(int number) {
+        this.number = number;
+    }
+
+    public int getNumber() {
+        return this.number;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(this.number);
+    }
+
+}

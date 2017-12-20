@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Activities.Permisos.AgregarPermisoV2"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_below="@id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvEmpleado"
+                android:visibility="gone"
+                android:text="@string/empleado"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinnerCatalogoEmpleado"
+                android:visibility="gone"
+                android:layout_below="@id/tvEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:spinnerMode="dialog"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+            </android.support.v7.widget.AppCompatSpinner>
+            <TextView
+                android:layout_below="@id/spinnerCatalogoEmpleado"
+                android:id="@+id/tvMotivo"
+                android:text="@string/motivo"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+            </TextView>
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinnerTipoPermiso"
+                android:layout_below="@id/tvMotivo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:spinnerMode="dialog"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <TextView
+                android:id="@+id/tvInicio"
+                android:layout_below="@+id/spinnerTipoPermiso"
+                android:text="@string/inicio"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+            <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.CalendarEditText
+                android:id="@+id/CalendarInicio"
+                android:layout_below="@id/tvInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/selecciona_una_fecha"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:drawableRight="@drawable/ic_calendar_gray"/>
+
+
+            <TextView
+                android:id="@+id/tvHoraInicio"
+                android:layout_below="@id/CalendarInicio"
+                android:text="@string/hora"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.TimeText
+                android:id="@+id/txtHoraInicio"
+                android:layout_below="@id/tvHoraInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/selecciona_hora"
+               />
+
+
+            <TextView
+                android:id="@+id/tvFin"
+                android:layout_below="@+id/txtHoraInicio"
+                android:text="@string/fin"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.CalendarEditText
+                android:id="@+id/CalendarFin"
+                android:layout_below="@id/tvFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/selecciona_una_fecha"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:drawableRight="@drawable/ic_calendar_gray"/>
+
+
+            <TextView
+                android:id="@+id/tvHoraFin"
+                android:layout_below="@id/CalendarFin"
+                android:text="@string/hora"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.TimeText
+                android:id="@+id/txtHoraFin"
+                android:layout_below="@id/tvHoraFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/selecciona_hora"
+                />
+
+
+            <EditText
+                android:id="@+id/txtComentario"
+                android:hint="@string/comentarios"
+                android:layout_below="@id/txtHoraFin"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:inputType="textMultiLine" >
+            </EditText>
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFCD00</color>
+    <color name="colorLogoAmarrillo">#FFCE00</color>
+    <color name="colorPrimaryTransparente">#C8FFCD00</color>
+    <color name="colorPrimaryDark">#7A7C7E</color>
+    <color name="colorBackgroundItems">#F7F5F1</color>
+    <color name="colorPrimaryDarker">#cfb002</color>
+    <color name="colorAccent">#7A7C7E</color>
+    <color name="colorGrisTrasnparent">#207A7C7E</color>
+    <color name="rojo">#FF0202</color>
+    <color name="gris_navigation">#66696D</color>
+    <color name="gris_info">#8c8989</color>
+    <color name="amarillo_dialogo">#EFC822</color>
+    <color name="negro">#000000</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="gris_textos">#666666</color>
+    <color name="transparente_home">#50000000</color>
+</resources>

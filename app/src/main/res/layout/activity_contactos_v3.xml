@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.Activities.Contactos.ContactosActivityV2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"></include>
+        </android.support.design.widget.AppBarLayout>
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prueba Android Oswald"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorGrisInfo"
+            android:layout_below="@+id/appBarLayout"/>
+
+
+        <TextView
+            android:id="@+id/tvLato"
+            android:layout_below="@+id/tvNombre"
+            android:layout_marginTop="20dp"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prueba Android Lato"/>
+
+           <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+              android:id="@+id/footerNavegacion"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+      <include layout="@layout/navigation_drawer"/>
+    </android.support.v4.widget.DrawerLayout>

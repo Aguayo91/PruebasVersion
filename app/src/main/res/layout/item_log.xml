@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:stretchColumns="*"
+        android:layout_height="55dp"
+        >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout  android:layout_column="0"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:id="@+id/tvDate3"
+                    android:text="OK FECHA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:id="@+id/tvEnviado"
+                    android:text="ENVIADO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvLat_Long"
+                android:textColor="@android:color/black"
+                android:layout_columnSpan="2"
+                android:layout_column="2"
+                />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

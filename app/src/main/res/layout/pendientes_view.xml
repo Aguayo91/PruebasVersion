@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/solicitudesLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/circle_yellow">
+
+    <ImageView
+        android:id="@+id/ic_alert"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_alert"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvAlert"
+        android:text="@string/solicitudes_pendientes"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/ic_alert"/>
+
+    <TextView
+        android:id="@+id/tvFlecha"
+        android:visibility="gone"
+        android:text=">"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tvAlert"/>
+
+</RelativeLayout>

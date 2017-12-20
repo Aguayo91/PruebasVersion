@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="@color/colorLogoAmarrillo"
+    tools:context="com.sociomas.aventones.UI.Activities.UsuarioPiloto.ActivityUsuarioPiloto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/imageSocioMas"
+        android:layout_marginTop="50dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/app_socio_mas_x2"/>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_below="@id/imageSocioMas"
+        android:id="@+id/txtNumeroEmpleado"
+        android:layout_marginTop="25dp"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        app:mtf_image="@mipmap/ic_add_profile"
+        app:mtf_labelColor="@android:color/black"
+        android:layout_marginBottom="15dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ingresa_no_empleado_piloto"
+            android:textColor="#333"
+            android:textColorHint="@android:color/black"
+            android:inputType="number"
+            android:textSize="14sp"
+            android:maxLength="10"/>
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnConfirmar"
+        android:layout_below="@+id/txtNumeroEmpleado"
+        android:layout_marginTop="25dp"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="Confirmar "
+        app:backgroundTint="@color/colorPrimaryDarker" />
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.sociomas.core.UI.Controls.Notification.FooterNavegacion>
+
+    </RelativeLayout>
+    <include layout="@layout/navigation_drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

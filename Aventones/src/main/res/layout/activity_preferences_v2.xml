@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="@color/colorGrisClaro">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBarLayout"
+            android:layout_above="@+id/rlfooter"
+            android:layout_marginBottom="-10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtSelecciona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGrisInfo"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/RelativePreferencias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSelecciona"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/dialog_holo_light_frame">
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoAnimales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:iconoRef="@drawable/ic_mascotas"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoFumar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:iconoRef="@drawable/ic_fumar"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_toRightOf="@id/imgProhibidoAnimales"/>
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoComer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:iconoRef="@drawable/ic_comer"
+                        android:layout_toLeftOf="@+id/imgProhibidoBasura"
+                        android:layout_marginRight="50dp"
+                        android:layout_alignTop="@+id/imgProhibidoBasura"
+                        android:layout_toStartOf="@+id/imgProhibidoBasura"/>
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgNinios"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:iconoRef="@drawable/ic_ninios"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoBasura"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:iconoRef="@drawable/ic_basura"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RelativePreferencias2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/RelativePreferencias"
+                    android:background="@android:drawable/dialog_holo_light_frame">
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoNinios"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:iconoRef="@drawable/ic_ninios"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoArmas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:iconoRef="@drawable/ic_armas_sl"
+                        android:layout_toRightOf="@+id/imgProhibidoNinios" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgNinios2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:iconoRef="@drawable/ic_ninios"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoDiscapacitados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:iconoRef="@drawable/ic_discapacitados"
+                        android:layout_toLeftOf="@+id/imgProhibidoBultos"
+                        android:layout_marginRight="50dp"
+                        android:layout_alignTop="@+id/imgProhibidoBultos"
+                        android:layout_toStartOf="@+id/imgProhibidoBultos" />
+
+                    <com.sociomas.aventones.UI.Controls.ProhibitedImage
+                        android:id="@+id/imgProhibidoBultos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:iconoRef="@drawable/ic_bultos"
+                        android:layout_marginRight="20dp"
+                        android:layout_alignTop="@+id/imgProhibidoArmas"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txtPreferente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/RelativePreferencias2"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/colorGrisInfo"
+                    android:text="Titulo compañeros"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <RadioGroup
+                    android:visibility="gone"
+                    android:id="@+id/RadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPreferente"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:drawable/dialog_holo_light_frame">
+
+                    <ImageView
+                        android:visibility="visible"
+                        android:id="@+id/imgMen"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/hombre_y_mujer"
+                        android:layout_marginLeft="1dp" />
+
+                    <RadioButton
+                        android:visibility="visible"
+                        android:id="@+id/rbMen"
+                        android:checked="true"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/men"
+                        android:textColor="@color/colorGrisInfo"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp" />
+
+
+                    <RadioButton
+                        android:visibility="visible"
+                        android:id="@+id/rbWomen"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:text="@string/women"
+                        android:textColor="@color/colorGrisInfo"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:visibility="visible"
+                        android:id="@+id/rbNoimporta"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/indistinto"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="2dp"
+                        android:checked="true"
+                        android:textColor="@color/colorGrisInfo"
+                        android:layout_marginTop="5dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/NecesidadesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/necesidades"
+                    android:textColor="@color/colorGrisInfo"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:id="@+id/imgSilla"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_silla_ruedas"
+                    android:layout_below="@+id/NecesidadesTitle"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"/>
+
+                <CheckBox
+                    android:id="@+id/CbSillaRuedas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="@string/Silla"
+                    android:layout_below="@+id/NecesidadesTitle"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:checked="true"
+                    android:textColor="@color/colorGrisInfo"
+                    android:layout_toRightOf="@+id/imgEmbarazo"
+                    android:layout_marginTop="5dp" />
+
+                <ImageView
+                    android:id="@+id/imgMuletas"
+                    android:layout_width="25dp"
+                    android:visibility="gone"
+                    android:layout_height="25dp"
+                    android:src="@drawable/muletas"
+                    android:layout_below="@+id/NecesidadesTitle"
+                    android:layout_toLeftOf="@+id/CbMuletas"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <CheckBox
+                    android:id="@+id/CbMuletas"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/NecesidadesTitle"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/muletas"
+                    android:textColor="@color/colorGrisInfo"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/imgEmbarazo"
+                    android:layout_width="40dp"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_embarazo"
+                    android:layout_below="@+id/imgSilla"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <CheckBox
+                    android:id="@+id/CbEmbarazo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="@string/Embarazo"
+                    android:checked="true"
+                    android:visibility="gone"
+                    android:layout_below="@+id/imgSilla"
+                    android:gravity="center"
+                    android:textColor="@color/colorGrisInfo"
+                    android:layout_toRightOf="@+id/imgEmbarazo"
+                    android:layout_marginTop="5dp" />
+
+                <ImageView
+                    android:id="@+id/imgTimer"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_cronometro"
+                    android:layout_below="@+id/RadioGroup"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/tvTitleTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Timetitle"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/RadioGroup"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorGrisInfo"
+                    android:layout_toRightOf="@+id/imgTimer"/>
+
+                <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                    android:id="@+id/discretSeekbar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleTime"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:thumb="@drawable/seek_bar"
+                    app:dsb_min="0"
+                    app:dsb_max="30"
+                    app:dsb_indicatorColor="#000"
+                    app:dsb_rippleColor="@color/colorLogoAmarrillo"
+                    app:dsb_trackColor="@color/colorGrisInfo"
+                    app:dsb_progressColor="@color/colorLogoAmarrillo"
+                    app:dsb_trackHeight="5dp"
+                    app:dsb_thumbSize="20dp"
+                    app:dsb_value="15" />
+
+                <!--EditText
+                    android:id="@+id/etObservaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/discretSeekbar1"
+                    android:layout_above="@+id/btnTerminar"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:hint="@string/otrasObservaciones"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:gravity="top"
+                    android:layout_marginBottom="20dp"/-->
+                <com.sociomas.core.UI.Controls.EditTextTamMax
+                    android:id="@+id/etObservaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/discretSeekbar1"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <Button
+                    android:id="@+id/btnTerminar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etObservaciones"
+                    android:text="@string/Publica"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="Next"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/circle_yellow"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+        </ScrollView>
+        <RelativeLayout
+            android:id="@+id/rlfooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+                android:id="@+id/footerNavegacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.sociomas.core.UI.Controls.Notification.FooterNavegacion>
+        </RelativeLayout>
+    </RelativeLayout>
+    <include layout="@layout/navigation_drawer"/>
+</android.support.v4.widget.DrawerLayout>

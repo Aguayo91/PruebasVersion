@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/rlBotones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"></include>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:layout_above="@+id/rlCenter">
+
+        <TextView
+            android:id="@+id/tvInicia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/presionaIniciar"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvInicia">
+
+        <com.jackandphantom.circularprogressbar.CircleProgressbar
+
+            app:cpb_progress="0"
+            app:cpb_roundedCorner="true"
+            app:cpb_foregroundProgressWidth="18"
+            app:cpb_foregroundProgressColor="@color/verde_progress"
+            app:cpb_touchEnabled="false"
+            android:id="@+id/circle_loading"
+            android:layout_width="159dp"
+            android:layout_height="159dp"
+            android:onClick="encuentra"
+            android:elevation="8dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/circulo_amarillo" />
+
+        <ImageView
+            android:id="@+id/imgIniciaBoton"
+            android:layout_width="169dp"
+            android:layout_height="169dp"
+            android:src="@drawable/inicio_boton"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true" />
+
+           </RelativeLayout>
+          </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlCenter"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlCenter"
+        android:layout_above="@+id/footerNavegacion">
+        <TextView
+            android:id="@+id/tvTermina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/presionaTermina"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginBottom="15dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvTermina">
+
+        <ImageView
+            android:id="@+id/imgTerminaBoton"
+            android:layout_width="169dp"
+            android:layout_height="169dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fin_boton"/>
+
+        <com.jackandphantom.circularprogressbar.CircleProgressbar
+
+            app:cpb_progress="0"
+            app:cpb_roundedCorner="true"
+            app:cpb_foregroundProgressWidth="18"
+            app:cpb_foregroundProgressColor="@color/rojo_progress"
+            app:cpb_touchEnabled="false"
+            android:id="@+id/circle_loading2"
+            android:layout_width="151.5dp"
+            android:layout_height="151.5dp"
+            android:onClick="encuentra"
+            android:elevation="8dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/circulo_amarillo" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlComienzoJornada"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imgInicio"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_inicio_fin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+        <TextView
+            android:id="@+id/tvHazComenzado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/imgInicio"
+            android:layout_centerVertical="true"
+            android:text= "@string/hazComenzado"
+            android:textSize="30sp"
+            android:textColor="@color/negro"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvRecuerdaFin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/tvHazComenzado"
+            android:text="@string/alConcluir"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/negro"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRecuerdaFin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="@string/buenDia"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="@color/negro"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlTerminoJornada"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imgTermino"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_inicio_fin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+        <TextView
+            android:id="@+id/tvHazTerminado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/imgTermino"
+            android:layout_centerVertical="true"
+            android:text= "@string/hazTerminado"
+            android:textSize="30sp"
+            android:textColor="@color/negro"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/tvHazTerminado"
+            android:text="@string/recuerdaSiempre"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/negro"/>
+    </RelativeLayout>
+
+    <include layout="@layout/navigation_drawer"/>
+</android.support.v4.widget.DrawerLayout>

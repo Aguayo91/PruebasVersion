@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/item_aventones"
+        app:cardElevation="@dimen/tarjeta_cardElevation"
+        app:cardBackgroundColor="@color/colorBackgroundItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:background="@color/blanco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_avatar_fondo" />
+            <TextView
+                android:id="@+id/tvNombreUsuario"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/imgAvatar"
+                android:textSize="9pt"
+                android:textColor="@color/negro"
+                android:text="@string/nobre_del_usuario"/>
+            <TextView
+                android:id="@+id/tvIdEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNombreUsuario"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/imgAvatar"
+                android:text="@string/idGodinez"/>
+            <ImageView
+                android:id="@+id/imgTelefono"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_phone"
+                android:layout_below="@+id/tvIdEmpleado"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/imgAvatar"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/tvTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvIdEmpleado"
+                android:layout_toRightOf="@+id/imgTelefono"
+                android:layout_marginTop="17dp"
+                android:text="@string/num_tel"
+                android:textColor="@color/negro"/>
+
+            <RelativeLayout
+                android:id="@+id/rl5"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@id/tvTelefono"
+                android:layout_marginTop="35dp"
+                android:background="@color/colorBackgroundItems" />
+
+
+            <LinearLayout
+                android:id="@+id/lLbotones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgTelefono"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal">
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fltOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabSize="normal"
+                    android:visibility="visible"
+                    android:gravity="center_horizontal"
+                    app:backgroundTint="@color/colorGreen"
+                    android:src="@mipmap/ic_check_white"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/flCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    app:fabSize="normal"
+                    android:visibility="visible"
+                    android:gravity="center_horizontal"
+                    app:backgroundTint="@android:color/holo_red_dark"
+                    android:src="@mipmap/ic_close_white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+

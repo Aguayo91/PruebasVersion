@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black">
+
+    <ImageView
+        android:id="@+id/imgclose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/close"/>
+
+    <TimePicker
+        android:id="@+id/timePickerFrecuencia"
+        android:timePickerMode="spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgclose"
+        android:theme="@android:style/Theme.Holo.Dialog"/>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/timePickerFrecuencia"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        style="@style/botonAmarillo"
+        android:textStyle="bold"
+        android:text="@string/Aceptar"/>
+
+</RelativeLayout>

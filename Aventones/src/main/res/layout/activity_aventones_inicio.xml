@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sociomas.aventones.UI.Activities.Rol.AventonRolUsuarioActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/flPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBarLayout"
+            android:layout_above="@+id/footerNavegacion">
+        </FrameLayout>
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/btnMenu"
+            android:visibility="visible"
+            android:elevation="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_above="@+id/footerNavegacion"
+            android:layout_marginBottom="15dp"
+            app:menu_fab_size="normal"
+            app:menu_showShadow="true"
+            app:menu_shadowColor="#66000000"
+            app:menu_shadowRadius="4dp"
+            app:menu_shadowXOffset="0dp"
+            app:menu_shadowYOffset="0dp"
+            app:menu_colorNormal="@color/colorPrimary"
+            app:menu_colorPressed="@color/colorPrimary"
+            app:menu_colorRipple="#99FFFFFF"
+            app:menu_animationDelayPerItem="50"
+            app:menu_icon="@drawable/ic_add"
+            app:menu_buttonSpacing="2dp"
+            app:menu_labels_margin="0dp">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabAgregarPiloto"
+                app:fab_size="mini"
+                android:elevation="20dp"
+                android:onClick="btnUsuarioPiloto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/ic_add_user_profile"
+                app:fab_label="@string/agregarUsuarioPiloto"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabEncuentra"
+                app:fab_size="mini"
+                android:elevation="20dp"
+                android:onClick="btnEncuentra"
+                android:layout_width="match_parent"
+                android:transitionName="@string/fab_encuentra"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/ic_encuentra"
+                app:fab_label="Encuentra tu aventón" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabPublicados"
+                app:fab_size="mini"
+                android:elevation="20dp"
+                android:onClick="btnPublicados"
+                android:transitionName="@string/fabPublicados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/ic_publicados"
+                app:fab_label="Aventones publicados" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabAsientos"
+                app:fab_size="mini"
+                android:elevation="20dp"
+                android:onClick="btnMisReservados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/ic_asientos"
+                app:fab_label="Mis aventones reservados" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabMiPerfil"
+                app:fab_size="mini"
+                android:elevation="20dp"
+                android:onClick="btnMiPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/ic_profile"
+                app:fab_label="Mis Preferencias Aventón" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.sociomas.core.UI.Controls.Notification.FooterNavegacion>
+        <RelativeLayout
+            android:id="@+id/frameAmarillo"
+            android:visibility="gone"
+            android:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAmarilloTransparente"/>
+    </RelativeLayout>
+
+    <include layout="@layout/navigation_drawer"/>
+</android.support.v4.widget.DrawerLayout>

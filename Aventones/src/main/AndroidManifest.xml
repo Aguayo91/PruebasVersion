@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sociomas.aventones">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <application>
+        <activity
+            android:name=".UI.Activities.Publicar.PublicaActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".UI.Activities.SearchActivity" />
+
+        <service android:name="com.sociomas.core.Services.LocationUIService" />
+
+        <activity
+            android:name=".UI.Activities.Carros.CarsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".UI.Activities.Preferencias.PreferencesActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".UI.Activities.Inicio.AventonInicioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Encuentra.EncuentraTuAventonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.EditarAventonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Disponibles.AventonesDisponiblesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Rol.AventonRolUsuarioActivity"
+            android:screenOrientation="portrait">
+           <intent-filter>
+                <action android:name="action_aventon" />
+                <action android:name="aventon" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+        </activity>
+        <activity android:name=".UI.Activities.SinResultadosActivity" />
+        <activity android:name=".UI.Activities.SolicitarAventonScreen" />
+        <activity
+            android:name=".UI.Activities.QrScan.QrScanActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".UI.Activities.AventonesReservadosActivity" >
+            <intent-filter>
+            <action android:name="estatus_aventon" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.Activities.MisAventones.AventonesPublicados" />
+        <activity android:name=".UI.Activities.SolicitarAventon.SolicitarAventonScreen" />
+        <activity android:name=".UI.Activities.RutaDisponible.RutaAventonesDisponibles" />
+        <activity android:name=".UI.Activities.SolicitudAceptarAventon.SolicitudConductorActivity">
+           <intent-filter>
+                <action android:name="solicitar_aventon" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+        </activity>
+        <activity android:name=".UI.Activities.MisPasajeros.MisPasajerosActivity" />
+        <activity android:name=".UI.Activities.UsuarioPiloto.ActivityUsuarioPiloto" />
+        <activity android:name=".UI.Activities.Ruta.RouteActivity" />
+        <activity android:name=".UI.Activities.ExpandQrActivity" />
+        <activity android:name=".UI.Activities.SampleActivity"></activity>
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+</manifest>

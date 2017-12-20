@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris_slide">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gris_slide">
+
+        <RelativeLayout
+            android:id="@+id/imgFondo"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background_bienvenida" />
+
+            <ImageView
+                android:id="@+id/imgUnidadNegocio"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvLugarTrabajo"
+            style="@style/textoSliderNegro"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgFondo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/lugar_trabajo"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/layoutLugarFijo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLugarTrabajo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/imgInformation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/ic_i" />
+
+            <TextView
+                android:id="@+id/tvLugarFijo"
+                style="@style/textoSliderNegro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="15dp"
+                android:text="No tengo lugar fijo"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <vn.luongvo.widget.iosswitchview.SwitchView
+                android:id="@+id/swSinLugarFijo"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLugarTrabajo"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tvLugarFijo"
+                app:color_on="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLugares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutLugarFijo"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtBusqueda"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignEnd="@+id/tvSeleccionados"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="26dp"
+                android:background="@android:color/white"
+                android:drawableEnd="@drawable/ic_search"
+                android:hint="@string/seleccion_ubicacion_lugar_t"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="12sp"></EditText>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerUbicacionesFlip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSiguiente"
+            style="@style/botonRedondoAmarillo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutLugares"
+            android:layout_marginTop="25dp"
+            android:text="@string/siguiente" />
+
+    </RelativeLayout>
+</ScrollView>
+

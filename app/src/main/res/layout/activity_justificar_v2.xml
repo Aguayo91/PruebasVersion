@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Activities.JustificarV2.Justificar.JustificarActivityV2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"></include>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/appBarLayout"
+            android:layout_above="@+id/footerNavegacion">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:id="@+id/imgIcono"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_falta"/>
+                <TextView
+                    android:id="@+id/tvDescripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgIcono"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/falta"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tvFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgIcono"
+                    android:layout_below="@+id/tvDescripcion"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/fecha_formato"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="10dp"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:id="@+id/tvEntrada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvFecha"
+                    android:layout_marginTop="15dp"
+                    android:layout_toLeftOf="@+id/center"
+                    android:background="@color/gris_horarios"
+                    android:text="@string/entrada"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/negro"/>
+
+                <TextView
+                    android:id="@+id/tvHoraEntrada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvEntrada"
+                    android:layout_toLeftOf="@+id/center"
+                    android:background="@color/rojo_horarios"
+                    android:text="@string/horaEntrada"
+                    android:padding="2dp"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/negro"/>
+
+                <TextView
+                    android:id="@+id/tvSalida"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvFecha"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/center"
+                    android:background="@color/gris_horarios"
+                    android:text="@string/salida"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/negro"/>
+
+                <TextView
+                    android:id="@+id/tvHoraSalida"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvEntrada"
+                    android:layout_toRightOf="@+id/center"
+                    android:background="@color/rojo_horarios"
+                    android:text="@string/horaSalida"
+                    android:padding="2dp"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/negro"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/gris_horarios">
+                <TextView
+                    android:id="@+id/tvTienes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/negro"
+                    android:textSize="16sp"
+                    android:text="Tienes una falta este dia."
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tvEnvia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTienes"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/negro"
+                    android:textSize="16sp"
+                    android:visibility="invisible"
+                    android:text="Envia una justificacion a tu jefe."
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_below="@+id/rlGrey"
+                android:layout_marginTop="-25dp">
+
+                <Button
+                    android:id="@+id/btnJustificar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gris_textos_nomina"
+                    android:text="@string/justificar"
+                    android:textSize="16sp"
+                    android:textColor="@color/blanco"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"/>
+                <ImageView
+                    android:id="@+id/imgJustificar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_justificaciones"
+                    android:layout_alignParentRight="true"
+                    android:translationZ="2dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true" />
+
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/regresar"
+                android:textSize="20sp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                style="@style/botonRedondoAmarillo"/>
+
+        </LinearLayout>
+        </ScrollView>
+
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <include layout="@layout/navigation_drawer" />
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorGrisClaro">
+
+
+        <android.support.v4.widget.Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+
+         <android.support.design.widget.AppBarLayout
+             android:id="@+id/appBarLayout"
+             android:layout_width="match_parent"
+             android:layout_height="65dp"
+             android:layout_below="@id/space">
+             <android.support.v7.widget.Toolbar
+                 xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/toolbar"
+                 android:layout_width="match_parent"
+                 android:layout_height="65dp"
+                 app:titleTextColor="@android:color/black"
+                 app:subtitleTextColor="@android:color/black"
+                 android:background="?attr/colorPrimary">
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+                     <ImageView
+                         android:id="@+id/ImgCancel"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_marginTop="15dp"
+                         android:layout_marginRight="30dp"
+                         android:layout_weight="0"
+                         android:src="@drawable/ic_close_black" />
+
+                     <TextView
+                         android:id="@+id/titulo"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="6"
+                         android:text="@string/ingresa_nombre"
+                         android:textAlignment="center"
+                         android:textSize="16sp"
+                         android:layout_marginTop="15dp"
+                         android:textStyle="bold"
+                         android:textColor="@android:color/black"/>
+
+                     <ImageView
+                         android:visibility="gone"
+                         android:id="@+id/imgAgregar"
+                         android:layout_width="20dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="2"
+                         android:layout_marginRight="5dp"
+                         android:src="@drawable/ic_check_black_24dp"
+
+                         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored" />
+                 </LinearLayout>
+             </android.support.v7.widget.Toolbar>
+         </android.support.design.widget.AppBarLayout>
+
+
+        <EditText
+                android:id="@+id/etSearchJefe"
+                android:layout_below="@+id/appBarLayout"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                style="@style/searchEditText"/>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerListaJefe"
+            android:layout_below="@+id/etSearchJefe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="false"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="30dp"/>
+
+
+    <com.sociomas.core.UI.Controls.Progress.ProgressBubble
+        android:id="@+id/pgBubble"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+
+</RelativeLayout>

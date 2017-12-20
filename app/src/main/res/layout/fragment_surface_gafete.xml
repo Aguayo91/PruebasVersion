@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.theartofdev.edmodo.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="30dp"
+        style="@style/botonRedondoAmarillo"/>
+
+
+
+
+
+
+
+
+    <FrameLayout
+        android:id="@+id/frameSurface"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/centra_tu_rostro_dentro_del_marco_y_cuando_ste_cambie_a_color_verde_parpadea_2_veces"
+            android:textColor="@color/gris_info"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <com.gruposalinas.elektra.sociomas.UI.Controls.Vision.CameraSourcePreview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.gruposalinas.elektra.sociomas.UI.Controls.Vision.ViewPortHole
+            android:id="@+id/viewPorteHole"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#7f000000"></com.gruposalinas.elektra.sociomas.UI.Controls.Vision.ViewPortHole>
+
+
+        <ImageView
+            android:id="@+id/imgCapturar"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_btn_camara" />
+
+
+        <ImageView
+            android:id="@+id/imageMarco"
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/marco_credencial"
+            android:visibility="gone"></ImageView>
+
+        <Button
+            android:id="@+id/btnCapturar"
+            style="@style/botonNegro"
+            android:layout_alignParentBottom="true"
+            android:text="Capturar"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+
+
+</FrameLayout>

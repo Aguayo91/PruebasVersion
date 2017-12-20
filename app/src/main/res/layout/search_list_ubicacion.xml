@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gris_claro"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true">
+    <android.support.v4.widget.Space
+        android:id="@+id/espacio"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <TextView
+        android:layout_below="@id/espacio"
+        android:id="@+id/tvFiltroNivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nivelPlantilla"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+    <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.CustomNumberPicker
+        android:layout_below="@id/tvFiltroNivel"
+        android:id="@+id/numberPicker"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.CustomNumberPicker>
+
+
+
+    <RelativeLayout
+        android:id="@+id/layoutIconos"
+        android:layout_below="@id/numberPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icTotal"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ic_total_socios"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="85"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/icTotal"/>
+        <ImageView
+            android:id="@+id/ic_check"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ic_check"
+            android:layout_toRightOf="@+id/tvTotal"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp" />
+        <TextView
+            android:id="@+id/tvValidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/ic_check" />
+        <ImageView
+            android:id="@+id/ic_warning"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/map_warning_icon"
+            android:layout_toRightOf="@+id/tvValidos"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp" />
+        <TextView
+            android:id="@+id/tvNoActualizados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/ic_warning" />
+        <ImageView
+            android:id="@+id/ic_other"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/ic_other"
+            android:layout_toRightOf="@+id/tvNoActualizados"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp" />
+        <TextView
+            android:id="@+id/tvOtros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="37"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ic_other" />
+    </RelativeLayout>
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/searchViewFloat"
+        app:iconifiedByDefault="false"
+        android:background="@android:color/white"
+        android:iconifiedByDefault="false"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@id/layoutIconos"
+        android:layout_marginTop="5dp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnCancelar"
+        android:text="CANCELAR"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--FOOTER-->
+    <RelativeLayout
+        android:id="@+id/layoutFooter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/btnCancelar">
+
+        <ImageView
+
+            android:id="@+id/ic_total"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/ic_total_socios"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/tvIc_Total"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="@string/totalsocio"
+            android:textColor="@android:color/black"
+            android:textSize="9dp"
+            android:layout_marginLeft="3dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ic_total"/>
+
+        <ImageView
+            android:id="@+id/ic_posValida"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_check"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvIc_Total"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/tvPosValida"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="@string/posvalida"
+            android:textColor="@android:color/black"
+            android:textSize="9dp"
+            android:layout_marginLeft="3dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ic_posValida"/>
+        <ImageView
+            android:id="@+id/ic_posInvalida"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/map_warning_icon"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvPosValida"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:id="@+id/tvPosInvalida"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="@string/posinvalida"
+            android:textColor="@android:color/black"
+            android:textSize="9dp"
+            android:layout_marginLeft="3dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ic_posInvalida"/>
+
+        <ImageView
+            android:id="@+id/ic_Otros"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_other"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvPosInvalida"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/otros"
+            android:textColor="@android:color/black"
+            android:textSize="9dp"
+            android:layout_marginLeft="3dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ic_Otros"/>
+    </RelativeLayout>
+
+
+    <ListView
+        android:visibility="visible"
+        android:layout_below="@id/searchViewFloat"
+        android:layout_above="@id/layoutFooter"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/listItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2sp"/>
+</RelativeLayout>

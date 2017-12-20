@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gruposalinas.elektra.sociomas"> <!-- =======PERMISOS Y DEMÁS======= -->
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19"
+        tools:ignore="GradleOverrides,OldTargetApi" />
+
+
+    <!-- Permiso interno para broadcasts -->
+    <permission android:name="com.gruposalinas.elektra.sociomas.PermisoInterno" />
+
+    <uses-permission android:name="com.gruposalinas.elektra.movilidadgs.PermisoInterno" />
+    <!-- Permite el uso de internet, leer el estado del WIFI/3G -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- PARA LA UBICACION POR GPS -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Reconocimiento de actividad -->
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+    <!-- Para Google Maps -->
+    <permission
+        android:name="com.gruposalinas.elektra.sociomas.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.gruposalinas.elektra.movilidadgs.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Permite reiniciar el servicio aunque se apague el dispositivo http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- permite la grabacion del video -->
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+
+    <!-- =======APLICACIÓN======= -->
+    <application
+        android:name=".Utils.ApplicationBase"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_socio_mas_x2"
+        android:installLocation="internalOnly"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/materialTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAkTZA_ONhBBsm08tDOn0glffES1_G0SIc" />
+        <!-- android:value="AIzaSyAYTu_IDLyWngwaT6Nc2u65citvgq6Zeis" /> -->
+
+
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="@string/google_maps_key" /> -->
+        <!-- created by ADT ext plugin at 2015-10-06 16:18:05 -->
+        <!-- created by ADT ext plugin at 2015-10-06 16:18:34 -->
+        <!-- created by ADT ext plugin at 2015-11-05 11:09:37 -->
+        <!-- =======SERVICIOS Y RECEPTORES======= -->
+        <!-- Broadcast que permite el arranque del servicio -->
+        <activity
+            android:name=".UI.Activities.MenuAplicaciones"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+
+        <receiver
+            android:name=".IO.Recievers.EventosReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.BATTEERY_LOW" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".IO.Services.EventoServiceV2"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+        <activity
+            android:name=".UI.Activities.Servicios.Aseguradoras"
+            android:label="@string/title_activity_contacto"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="action_polizas" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- SERVICIOS Y BROADCASTRECEIVERS DE V2 -->
+        <receiver
+            android:name=".IO.Recievers.LocationBootReceiver"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="com.gruposalinas.elektra.movilidadgs.INICIAR_SERVICIOS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HOME" />
+
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".IO.Recievers.LocationAlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".IO.Services.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".IO.Services.LocationJobService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".IO.Services.HoraService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".IO.Recievers.HoraReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" />
+
+        <service
+            android:name=".IO.Services.AlertService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" />
+        <service
+            android:name=".IO.Services.ActivityService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".IO.Services.ActivityIntentService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".IO.Services.ScreenOnService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".IO.Services.SOService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".UI.Activities.SplashScreen.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".IO.FireBase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".IO.FireBase.TokenID">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".UI.Activities.Log.LogActivity">
+            <intent-filter>
+                <action android:name="action_log" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".IO.Recievers.ActivityReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.gruposalinas.elektra.movilidadgs.INICIAR_RECONOCIMIENTO_ACTIVIDAD" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".IO.Recievers.HoraChecker"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".IO.Services.HoraCheckerService"
+            android:enabled="true"
+            android:exported="true" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <activity
+            android:name=".UI.Activities.Ubicaciones.LastUbicacionActivity"
+            android:label="@string/title_activity_last_ubicacion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Contactos.ContactosActivityV2"
+            android:parentActivityName=".UI.Activities.Perfil.ConfiguracionActivity"
+            android:screenOrientation="portrait"
+            android:showOnLockScreen="true">
+            <intent-filter>
+                <action android:name="action_contactos" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Justificaciones.IncidenciasListaActivityV2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Justificaciones.IncidenciaPlantillaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".UI.Activities.Justificaciones.FullscreenImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen_image"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".UI.Activities.Permisos.PermisosPlantillaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".UI.Activities.Ubicaciones.TrackingActivity"
+            android:label="@string/title_activity_last_ubicacion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Ubicaciones.StreetViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Justificaciones.JustificarIncidenciaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Permisos.MisPermisosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Permisos.AgregarPermisoV2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Horarios.MisHorariosActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="action_horario" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Horarios.HorarioPendienteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Horarios.HorariosPlantillaActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="action_horario_plantilla" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Horarios.HorariosAutorizarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Zonas_Ubicaciones.MisZonasUActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Zonas_Ubicaciones.CatalogoZonasActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".UI.Activities.Zonas_Ubicaciones.CatalogoTiendasActivity"
+            android:parentActivityName=".UI.Activities.LugaresTrabajo.LugaresActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".UI.Activities.Zonas_Ubicaciones.MapaZonaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Zonas_Ubicaciones.ZonasAutorizarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".UI.Activities.Codigo.Verificar.VerificarSmsActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <receiver
+            android:name=".IO.Recievers.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                android:priority="2147483647">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".UI.Activities.Inicio.SliderActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name=".UI.Activities.Inicio.InicioActivity" -->
+        <!-- android:screenOrientation="portrait"> -->
+        <!-- <intcheckedlter> -->
+        <!-- <action android:name="action_inicio" /> -->
+
+
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- </intcheckedlter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".UI.Activities.Inicio.InicioActivityV2"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="action_inicio" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Codigo.Modificar.ModificarTelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Perfil.ConfiguracionActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="action_cofiguraciones" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Ubicaciones.IndicacionesActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="action_puntos_interes" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Cuentanos.VistaWebView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Permisos.PermisosTabActivity"
+            android:label="@string/title_activity_horarios_tab"
+            android:screenOrientation="portrait"
+            android:theme="@style/materialTheme">
+            <intent-filter>
+                <action android:name="action_permiso" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Gafete.GafeteActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="action_gafete" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Justificaciones.IncidenciaTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.SOS.SosActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="action_sos" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.DesactivarSOS.DesactivarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Asistencia.AsistenciaActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".IO.Services.SOSAudioService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".UI.Activities.Promociones.PromocionesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Promociones.PromocionListadoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Promociones.PromocionesDetalle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Gafete.CrearGafeteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+        <activity
+            android:name=".UI.Activities.Nomina.NominaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="action_nomina" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Nomina.NominaDetalleReciboActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".UI.Activities.Nomina.NominaDetalleGeografiaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.Activities.LugaresTrabajo.LugaresActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="action_lugares" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.sociomas.core.Services.LocationUIService" />
+
+        <activity
+            android:name="com.sociomas.aventones.UI.Activities.Preferencias.PreferencesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Justificaciones.Expandible.IncidenciaExpandibleActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="action_justificaciones" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Asistencia.SpinnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.CredencialProto.GafeteActivityProto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Promociones.Categorias.PromocionesActivityV2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="action_promociones" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Promociones.Listado.PromocionesListadoV2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activities.Promociones.Detalle.PromocionDetalleActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".UI.Activities.HoraCalculada.HoraCalculada">
+            <intent-filter>
+                <action android:name="action_hora" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.Activities.Jornada.IniciarJornadaActivity">
+            <intent-filter>
+                <action android:name="action_jornada" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.Activities.Contactos.ContactosActivityV3" />
+        <activity android:name=".UI.Activities.Asistencia_V2.AsistenciasActivityV2">
+            <intent-filter>
+                <action android:name="action_asistencias" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.Asistencia_V2.MisAsistencias.MisAsistenciasActivityV2"
+            android:parentActivityName=".UI.Activities.Asistencia_V2.AsistenciasActivityV2" />
+        <activity
+            android:name=".UI.Activities.Asistencia_V2.AsistenciaConsultas.AsistenciaConsultasActivity"
+            android:parentActivityName=".UI.Activities.Asistencia_V2.AsistenciasActivityV2" />
+        <activity android:name=".UI.Activities.Notificaciones.BuzonActivity">
+            <intent-filter>
+                <action android:name="action_buzon" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.Activities.Notificaciones.NotificacionesExtendidas">
+            <intent-filter>
+                <action android:name="action_info" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Activities.JustificarV2.Justificar.JustificarActivityV2"
+            android:configChanges="keyboardHidden|screenSize|orientation|touchscreen"
+            android:parentActivityName=".UI.Activities.JustificarV2.Listado.JustificacionSelectionActivity"/>
+        <activity
+            android:name=".UI.Activities.Asistencia_V2.AsistenciaHoy.MisAsistenciasHoyActivity"
+            android:parentActivityName=".UI.Activities.Asistencia_V2.AsistenciasActivityV2" />
+        <activity
+            android:name=".UI.Activities.JustificarV2.JustificacionEnviada"
+            android:parentActivityName=".UI.Activities.JustificarV2.Justificar.JustificarActivityV2" />
+        <activity
+            android:name=".UI.Activities.JustificarV2.Listado.JustificacionSelectionActivity"
+            android:parentActivityName=".UI.Activities.JustificarV2.Justificar.JustificarActivityV2" />
+        <activity android:name=".UI.Activities.Rifa.RifaActivity">
+            <intent-filter>
+                <action android:name="action_rifa" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.Activities.Gafete.GafetePreviewActivity" />
+        <activity android:name=".UI.Activities.Legal.LegalActivity" />
+        <activity android:name=".UI.Activities.CambiarTel.MiNumeroTelefonicoActivity" />
+    </application>
+
+</manifest>

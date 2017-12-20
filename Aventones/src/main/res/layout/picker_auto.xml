@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:padding="5dp">
+    <RelativeLayout
+        android:id="@+id/relativeUbicacionIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_coche"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/txtAutocomplete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="14sp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:paddingLeft="10dp"
+        android:hint="Selecciona un automóvil"
+        android:layout_toRightOf="@+id/relativeUbicacionIcon"
+        android:layout_toLeftOf="@+id/tvHorario"
+        android:dropDownHeight="200dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_drop_down"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        />
+
+
+</RelativeLayout>

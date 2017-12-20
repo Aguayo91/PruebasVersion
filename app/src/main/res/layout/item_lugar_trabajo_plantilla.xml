@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/tarjeta_cardCornerRadius"
+    app:cardElevation="@dimen/tarjeta_cardElevation"
+    app:contentPadding="@dimen/card_padding"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgMapa"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/ic_avatar_fondo" />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative1"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imgAvatar"
+            android:text="Raul Ivan Martinez" />
+
+
+        <ImageView
+            android:id="@+id/imageCircleNombre"
+            android:layout_below="@+id/tvNombre"
+            android:layout_toRightOf="@+id/imgAvatar"
+            android:layout_marginTop="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_toEndOf="@id/imageCircleNombre"
+            android:id="@+id/tvLugarTrabajo"
+            android:layout_below="@+id/tvNombre"
+            android:text="TORRE ESMERALDA"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Base.TextAppearance.AppCompat.Small"/>
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvLugarTrabajo"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#bcbaba"
+            android:padding="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/layoutComentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl2"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/txtComentarioLugar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_redondo"
+                android:hint="Comentarios"
+                android:paddingLeft="10dp" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnAutorizar"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/txtComentarioLugar"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/autorizar"
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:background="@drawable/circle_yellow"
+                app:backgroundTint="@color/colorPrimary" />
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnRechazar"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtComentarioLugar"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/btnAutorizar"
+                android:text="@string/rechazar"
+                android:textColor="@android:color/black"
+                android:background="@drawable/circle_yellow"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+

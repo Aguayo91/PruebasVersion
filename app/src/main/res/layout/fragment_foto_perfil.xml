@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_perfil">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_avatar_fondo_v2"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/yellow_circle"/>
+
+
+    <ImageView
+        android:id="@+id/imgCamara"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/camara_ic_perfil"
+        android:layout_below="@+id/imgAvatar"
+        android:layout_marginTop="-40dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/tvFotoPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgCamara"
+        android:text="@string/anade_foto_perfil"
+        android:layout_marginTop="20dp"
+        style="@style/textoSlider"
+        android:textStyle="normal"/>
+
+      <TextView
+          android:id="@+id/tvComienza"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/configura_app"
+          android:layout_below="@+id/tvFotoPerfil"
+          style="@style/textoSlider"
+          android:textStyle="normal"/>
+
+
+    <Button
+        android:id="@+id/btnOmitir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/omitir"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/tvComienza"
+        style="@style/botonRedondo"/>
+
+</RelativeLayout>

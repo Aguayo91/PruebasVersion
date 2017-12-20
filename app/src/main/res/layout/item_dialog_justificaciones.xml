@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/rlHeaderPlantilla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@android:color/transparent">
+        <TextView
+            android:id="@+id/tvSalidaTemprano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/salidaTemprano"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvCerar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cerrar"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:layout_toLeftOf="@+id/imgClose"
+            android:layout_marginTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/ic_close_white"/>
+
+
+        <RelativeLayout
+
+            android:id="@+id/rlPlantillaDate"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="55sp"
+            android:layout_below="@+id/imgClose"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_avatar"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/JuanPablo"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                android:layout_toRightOf="@+id/imgAvatar"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvUserId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/socio"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                android:layout_toRightOf="@+id/imgAvatar"
+                android:layout_below="@+id/tvUserName"
+                android:layout_marginTop="2dp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#ff5378"
+        android:layout_below="@+id/rlHeaderPlantilla"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/center"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/fecha_formato"
+            android:textColor="@color/blanco"/>
+        <TextView
+            android:id="@+id/tvDia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFecha"
+            android:text="@string/Lunes_completo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/blanco"/>
+        <TextView
+            android:id="@+id/tvHoraEntrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/center"
+            android:layout_centerVertical="true"
+            android:text="@string/horaEntrada"
+            android:textColor="@color/blanco"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvHoraSalida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/center"
+            android:layout_centerVertical="true"
+            android:text="@string/horaSalida"
+            android:textColor="@color/blanco"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/imgIcono"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_falta"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHeader">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.sociomas.core.UI.Controls.EditTextTamMax
+                android:id="@+id/etMaxTam"
+                android:layout_width="match_parent"
+                android:layout_height="161dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+            </com.sociomas.core.UI.Controls.EditTextTamMax>
+
+            <RelativeLayout
+                android:id="@+id/rlAutocomplete"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@+id/etMaxTam"
+                android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_edit_grey2" />
+
+
+            <TextView
+                android:id="@+id/tvJefeInmediato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/jefe_inmediato"
+                android:textSize="12sp"
+                android:textColor="@color/negro"
+                android:paddingLeft="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/blanco"/>
+
+
+
+            <AutoCompleteTextView
+                android:id="@+id/tvJefeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/tvJefeInmediato"
+                android:layout_toLeftOf="@+id/imgEdit"
+                android:paddingLeft="15dp"
+                android:text="@string/nombre_jefe"
+                android:textSize="16sp"
+                android:background="@color/blanco"
+                android:textColor="@color/negro"
+                android:paddingBottom="10dp"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/rlBoton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/rlAutocomplete"
+                android:orientation="horizontal"
+                android:background="@android:color/transparent">
+
+
+
+                <Button
+                    android:id="@+id/btnJustificar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight = "1"
+                    android:layout_margin="10dp"
+                    style="@style/botonGris"
+                    android:text="@string/justificar"
+                    android:textSize="20sp"
+                    android:textAllCaps="true"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:padding="5dp" />
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/btnRechazar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight = "1"
+                    android:layout_margin="10dp"
+                    style="@style/botonGris"
+                    android:text="@string/rechazar"
+                    android:textSize="20sp"
+                    android:textAllCaps="true"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

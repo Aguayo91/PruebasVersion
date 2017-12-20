@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+
+    <!-- Tarjeta -->
+    <dimen name="card_padding">8dp</dimen>
+    <dimen name="tarjeta_cardCornerRadius">4dp</dimen>
+    <dimen name="tarjeta_cardElevation">4dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+
+    <dimen name="padding_tooltip">8dp</dimen>
+    <dimen name="radius_tooltip">8dp</dimen>
+    <dimen name="text_size_tooltip">16sp</dimen>
+
+</resources>

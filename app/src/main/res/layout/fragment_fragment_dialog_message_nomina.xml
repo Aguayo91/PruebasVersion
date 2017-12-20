@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:minHeight="1000dp"
+    tools:context="com.gruposalinas.elektra.sociomas.UI.Fragments.Nomina.FragmentDialogMessageNomina">
+
+    <ImageView
+        android:id="@+id/ivImagenMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/banner_nomina1" />
+
+    <!--<Button-->
+        <!--android:id="@+id/btnContinue"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_margin="20dp"-->
+        <!--style="@style/botonAmarillo"-->
+        <!--android:text="@string/textoContinuar" />-->
+
+</LinearLayout>

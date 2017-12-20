@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.Activities.Contactos.ContactosActivityV2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"></include>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <TextView
+            android:layout_below="@+id/appBarLayout"
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a_que_contactos_se_enviar_notificaci_n_n_en_caso_de_emergencia"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal" />
+
+        <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.ContactoEditText
+            android:id="@+id/ContactoEditUno"
+            app:numeroContacto="1"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.ContactoEditText>
+
+
+        <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.ContactoEditText
+            android:id="@+id/ContactoEditDos"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/ContactoEditUno"
+            app:numeroContacto="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.ContactoEditText>
+
+
+        <com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.ContactoEditText
+            android:id="@+id/ContactoEditTres"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/ContactoEditDos"
+            app:numeroContacto="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.gruposalinas.elektra.sociomas.UI.Controls.EditTexts.ContactoEditText>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:onClick="onClick"
+            android:text="Guardar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/footerNavegacion"
+            style="@style/botonAmarillo"/>
+        <com.sociomas.core.UI.Controls.Notification.FooterNavegacion
+            android:id="@+id/footerNavegacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <include layout="@layout/navigation_drawer"/>
+</android.support.v4.widget.DrawerLayout>
+

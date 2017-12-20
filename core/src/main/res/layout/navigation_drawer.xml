@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.NavigationView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:theme="@style/NavigationDrawerStyle"
+    android:id="@+id/nav_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="true"
+    app:itemIconTint="@android:color/black"
+    app:headerLayout="@layout/nav_header_principal">
+    <!--ALTO DE HEADERVIEW-->
+    <RelativeLayout
+        android:layout_marginTop="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:state_enabled="true"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5dp" />
+
+        <TextView
+            android:text="Versión: 3.0"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/tvVersion" />
+    </RelativeLayout>
+
+</android.support.design.widget.NavigationView>

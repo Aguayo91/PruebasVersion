@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorGrisClaro">
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_close"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/imgReloj"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/imgClose"
+        android:src="@drawable/ic_clock_fondo"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgReloj"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/queEsHorario"
+        style="@style/textoSliderNegro"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeIos"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tvQuestion"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tvNoTengoLugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="@string/MiHorario"
+            android:textSize="14dp"
+            android:layout_centerVertical="true"/>
+
+        <vn.luongvo.widget.iosswitchview.SwitchView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvNoTengoLugar"
+            android:layout_marginLeft="10dp"
+            app:color_on="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeIos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/siDentrodeTu"
+        android:textColor="@android:color/black"
+        android:textSize="13.5dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tvHorarioVariableTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/horarioVariable"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvContent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHorarioVariableTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/enEstaModalidad"
+        android:textColor="@android:color/black"
+        android:textSize="13.5dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tvOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvContent2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/okEntendido"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content" android:layout_marginTop="15dp"
+    android:layout_marginLeft="5dp">
+
+
+    <ImageView
+        android:id="@+id/imgAutorizados"
+        android:src="@drawable/icono_autorizado_x2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="10dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvAutorizados"
+        android:layout_toRightOf="@id/imgAutorizados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autorizados"
+        android:textSize="12dp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="15dp"/>
+
+
+    <ImageView
+        android:id="@+id/imgPorAutorizar"
+        android:layout_toRightOf="@id/tvAutorizados"
+        android:src="@drawable/icono_pendiente_autorizar_x2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="10dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvPorAutorizar"
+        android:layout_toRightOf="@id/imgPorAutorizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/por_autorizar"
+        android:textSize="12dp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="15dp"/>
+
+    <ImageView
+        android:id="@+id/imgRechazados"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/tvPorAutorizar"
+        android:src="@drawable/icono_por_justificar_x2"/>
+
+
+    <TextView
+        android:layout_toRightOf="@id/imgRechazados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rechazados"
+        android:textSize="12dp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="15dp"/>
+</RelativeLayout>
