@@ -4,9 +4,9 @@
     <modules>
       <module fileurl="file://E:\Users\jromeromar\Documents\movilidad\AppSocioMAS.iml" filepath="E:\Users\jromeromar\Documents\movilidad\AppSocioMAS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Aventones/Aventones.iml" filepath="$PROJECT_DIR$/Aventones/Aventones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Movilidad.iml" filepath="$PROJECT_DIR$/Movilidad.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/movilidad.iml" filepath="$PROJECT_DIR$/movilidad.iml" />
     </modules>
   </component>
 </project>
